@@ -36,8 +36,6 @@ public class PCController : MonoBehaviour
     }
 
 
-
-
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -45,7 +43,9 @@ public class PCController : MonoBehaviour
 
     void Update()
     {
+#if UNITY_EDITOR
         Look();
+#endif
     }
 
     private void Look()
