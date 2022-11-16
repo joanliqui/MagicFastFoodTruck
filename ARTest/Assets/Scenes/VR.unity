@@ -797,6 +797,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2107459192}
   - component: {fileID: 2107459191}
+  - component: {fileID: 2107459193}
+  - component: {fileID: 2107459194}
   m_Layer: 0
   m_Name: XRRig
   m_TagString: Untagged
@@ -837,3 +839,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2107459193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107459190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6df71824f341bc4897680bb8beb4090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxRaycastDistance: 10
+  m_ReticlePrefab: {fileID: 4427941728232889330, guid: ac45d183e17e6ce4fa5adde4694bb347, type: 3}
+  m_PrefabScalingFactor: 1
+  m_UndoDistanceScaling: 1
+  m_AlignPrefabWithSurfaceNormal: 1
+  m_EndpointSmoothingTime: 0.02
+  m_DrawWhileSelecting: 0
+  m_RaycastMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2107459194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107459190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754ad1fe5dd3cec41becefc1741dd193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 100
+  camBody: {fileID: 2106484288}

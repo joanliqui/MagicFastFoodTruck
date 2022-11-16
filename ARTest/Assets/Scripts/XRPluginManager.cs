@@ -19,6 +19,7 @@ public class XRPluginManager : MonoBehaviour
 
     public void InicializeXRLoader(UnityEngine.XR.Management.XRLoader loader)
     {
+#if PLATFORM_ANDROID && !UNITY_EDITOR
         bool initSucces = loader.Initialize();
         if (!initSucces)
         {
@@ -34,6 +35,7 @@ public class XRPluginManager : MonoBehaviour
                 loader.Deinitialize();
             }
         }
+#endif
     }
 
     public void InicializeARCoreLoader()
@@ -93,11 +95,13 @@ public class XRPluginManager : MonoBehaviour
     }
     public void StopSubsystemXR()
     {
+#if PLATFORM_ANDROID && !UNITY_EDITOR
         Debug.Log("Stopping XR...");
 
         XRGeneralSettings.Instance.Manager.StopSubsystems();
         XRGeneralSettings.Instance.Manager.DeinitializeLoader();
         Debug.Log("XR stopped completely.");
+#endif
     }
     void StopXR()
     {
