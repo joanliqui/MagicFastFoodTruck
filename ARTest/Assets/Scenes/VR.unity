@@ -701,6 +701,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1027631113}
+  - {fileID: 1103931362}
   m_Father: {fileID: 2106484288}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -806,6 +807,89 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   _reticlePrefab: {fileID: 6978465848317897532, guid: 3824fa98cc16a1b48b79400594cc83cd, type: 3}
+--- !u!1 &1103931361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1103931362}
+  - component: {fileID: 1103931365}
+  - component: {fileID: 1103931364}
+  m_Layer: 0
+  m_Name: InventoryObjectModel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1103931362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103931361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.872}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 963194228}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1103931364
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103931361}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1103931365
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103931361}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1210164526
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,6 +972,7 @@ GameObject:
   - component: {fileID: 1303420918}
   - component: {fileID: 1303420922}
   - component: {fileID: 1303420923}
+  - component: {fileID: 1303420924}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Untagged
@@ -1002,6 +1087,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1303420924}
+        m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
+        m_MethodName: ToogleGlow
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnGazeStay:
     m_PersistentCalls:
       m_Calls: []
@@ -1012,6 +1109,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: ChangeMaterial, Assembly-CSharp
         m_MethodName: Reset
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1303420924}
+        m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
+        m_MethodName: ToogleGlow
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1035,6 +1144,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1303420924}
+        m_TargetAssemblyTypeName: PickeableCube, Assembly-CSharp
+        m_MethodName: Pick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2107459195}
+          m_ObjectArgumentAssemblyTypeName: Inventory, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnGazeToggle:
     m_PersistentCalls:
       m_Calls: []
@@ -1052,6 +1173,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enterMat: {fileID: 2100000, guid: 355f58304f547d04a9908fdfbcc082fb, type: 2}
   activatedMat: {fileID: 2100000, guid: d30b3cba3a0f8f64887f627f03417e63, type: 2}
+--- !u!114 &1303420924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303420917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5e004452e24874fb2f822e77787c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1339676342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,6 +1520,7 @@ GameObject:
   - component: {fileID: 2107459192}
   - component: {fileID: 2107459191}
   - component: {fileID: 2107459194}
+  - component: {fileID: 2107459195}
   m_Layer: 0
   m_Name: XRRig
   m_TagString: Untagged
@@ -1441,3 +1575,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 20
   camBody: {fileID: 2106484288}
+--- !u!114 &2107459195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107459190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5b277d7e6552f49abf191cf37b2128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryObjectModel: {fileID: 1103931365}
