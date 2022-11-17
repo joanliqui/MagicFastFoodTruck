@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6978465848122272763}
   - component: {fileID: 6978465848122272760}
   - component: {fileID: 6978465848122272761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GazeCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 6978465848135426845}
   - component: {fileID: 6978465848135426847}
   - component: {fileID: 6978465848135426844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RadialBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 6978465848163088835}
   - component: {fileID: 6978465848163088837}
   - component: {fileID: 6978465848163088834}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RadialBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6978465848317897534}
   - component: {fileID: 6978465848317897535}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GazeReticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6978465849174221470}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RadialBard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 6978465849390085049}
   - component: {fileID: 6978465849390085050}
   - component: {fileID: 6978465849390085051}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GazeModelPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
