@@ -14,17 +14,32 @@ public class GazeInteractor : MonoBehaviour
 
     private float _enterStartTime;
 
+    [SerializeField] GameObject _reticlePrefab;
+    private GazeReticle _reticle;
     private GazeInteractable interactable;
     private void Start()
     {
-      
+        _reticle = Instantiate(_reticlePrefab).GetComponent<GazeReticle>();
+        _reticle.SetInteractor(this);
     }
+
     private void Update()
     {
         ray = new Ray(transform.position, transform.forward);
-        if(Physics.Raycast(ray,out hit, maxDetectionDistance, layerMask))
+        if(Physics.Raycast(ray,out hit, maxDetectionDistance)) //Miramos si choca con cualquier objeto
         {
             float distance = Vector3.Distance(transform.position, hit.transform.position);
+            if(distance < minDetectionDistance)
+            {
+                _reticle.Enable(false);
+                Reset();
+                return;
+            }
+
+            _reticle.PointerOnGaze(hit.point);
+            _reticle.Enable(true);
+
+            //Miramos si el objeto con el que choca es interactuable
             GazeInteractable inter = hit.collider.transform.GetComponent<GazeInteractable>();
 
             if(inter == null)
@@ -50,6 +65,8 @@ public class GazeInteractor : MonoBehaviour
                 float progress = 1 - (timeToActivate / _timeToActivate);
                 progress = Mathf.Clamp(progress, 0, 1);
 
+                _reticle.SetProgress(progress);
+
                 if(progress >= 1)
                 {
                     interactable.Activate();
@@ -58,6 +75,7 @@ public class GazeInteractor : MonoBehaviour
         }
         else //Si apuntas a la nada o a un objeto de otra Layer
         {
+            _reticle.PointerOutGaze(maxDetectionDistance);
             Reset();
         }
     }
@@ -66,6 +84,8 @@ public class GazeInteractor : MonoBehaviour
     /// </summary>
     private void Reset()
     {
+        _reticle.SetProgress(0);
+
         if(interactable == null) { return; }
 
         interactable.GazeExit(this);
