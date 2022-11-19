@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HotDogPlate
   m_EditorClassIdentifier: 
   plateName: HotDog
-  playePrefab: {fileID: 0}
+  playePrefab: {fileID: 7223529478472731262, guid: 5cae43f18f9bd6a47abf3ee38c31c974, type: 3}

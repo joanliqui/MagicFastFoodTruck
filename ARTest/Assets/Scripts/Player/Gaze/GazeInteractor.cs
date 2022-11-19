@@ -17,6 +17,10 @@ public class GazeInteractor : MonoBehaviour
     [SerializeField] GameObject _reticlePrefab;
     private GazeReticle _reticle;
     private BaseGazeInteractable interactable;
+    private bool canInteract = true;
+
+    public bool CanInteract { get => canInteract; set => canInteract = value; }
+
     private void Start()
     {
         _reticle = Instantiate(_reticlePrefab).GetComponent<GazeReticle>();
@@ -58,7 +62,7 @@ public class GazeInteractor : MonoBehaviour
             }
 
             interactable.GazeStay(this, hit.point);
-
+           
             if(interactable.IsActivable && !interactable.IsActivated)
             {
                 float timeToActivate = (_enterStartTime + _timeToActivate) - Time.time;
@@ -72,6 +76,7 @@ public class GazeInteractor : MonoBehaviour
                     interactable.Activate();
                 }
             }
+            
         }
         else //Si apuntas a la nada o a un objeto de otra Layer
         {

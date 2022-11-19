@@ -6,6 +6,7 @@ public class Inventory : MonoBehaviour
 {
     private IPickeable _currentObject;
     [SerializeField] MeshFilter inventoryObjectModel;
+    [SerializeField] GazeInteractor interactor;
 
     private void Start()
     {
@@ -48,5 +49,13 @@ public class Inventory : MonoBehaviour
         }
 
         return null;
+    }
+
+    public void CanInteract()
+    {
+        if(this._currentObject != null)
+        {
+
+        }
     }
 }
