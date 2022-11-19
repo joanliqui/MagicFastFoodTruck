@@ -12,11 +12,12 @@ public class Inventory : MonoBehaviour
         EnableModel(false);
     }
 
-    public void AddToInventory(IPickeable pick)
+    public void AddToInventory(IPickeable pick, Vector3 scale)
     {
         _currentObject = pick;
-        Mesh mesh = pick.gameObject.GetComponent<MeshFilter>().mesh;
+        Mesh mesh = pick.gameObject.GetComponentInChildren<MeshFilter>().mesh;
         inventoryObjectModel.mesh = mesh;
+        inventoryObjectModel.transform.localScale = scale;
         EnableModel(true);
     }
 
@@ -25,8 +26,27 @@ public class Inventory : MonoBehaviour
         inventoryObjectModel.gameObject.SetActive(enable);
     }
 
-    public void CleanInvemtory()
+    public void CleanInventory()
     {
         _currentObject = null;
+        EnableModel(false);
+    }
+
+    public BaseFood GetCurrentObjectAsFood()
+    {
+        if(_currentObject != null)
+        {
+            if (_currentObject.gameObject.TryGetComponent(out BaseFood food))
+            {
+                return food;
+            }
+            else
+            {
+                Debug.Log("El objeto del inventario no es comida");
+                return null;
+            }
+        }
+
+        return null;
     }
 }

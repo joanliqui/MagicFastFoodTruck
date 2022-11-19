@@ -16,7 +16,7 @@ public class GazeInteractor : MonoBehaviour
 
     [SerializeField] GameObject _reticlePrefab;
     private GazeReticle _reticle;
-    private GazeInteractable interactable;
+    private BaseGazeInteractable interactable;
     private void Start()
     {
         _reticle = Instantiate(_reticlePrefab).GetComponent<GazeReticle>();
@@ -40,7 +40,7 @@ public class GazeInteractor : MonoBehaviour
             _reticle.Enable(true);
 
             //Miramos si el objeto con el que choca es interactuable
-            GazeInteractable inter = hit.collider.transform.GetComponent<GazeInteractable>();
+            BaseGazeInteractable inter = hit.collider.transform.GetComponent<BaseGazeInteractable>();
 
             if(inter == null)
             {

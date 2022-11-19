@@ -6,10 +6,12 @@ public class Fridge : Electrodomestico, IInteractuable
 {
     Animator anim;
     bool isOpen = false;
+    Collider col;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        col = GetComponent<Collider>();
     }
     public void Interact()
     {
@@ -26,5 +28,11 @@ public class Fridge : Electrodomestico, IInteractuable
         yield return new WaitForSeconds(10f);
         anim.SetTrigger("Close");
         isOpen = false;
+        EnableCollider(true);
+    }
+
+    public void EnableCollider(bool enable)
+    {
+        col.enabled = enable;
     }
 }

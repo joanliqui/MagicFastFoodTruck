@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Alimento : BaseFood
+public interface IContainer
 {
-   
+    public void PutIn(BaseFood food);
 }

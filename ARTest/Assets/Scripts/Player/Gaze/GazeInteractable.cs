@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GazeInteractable : MonoBehaviour
+public class GazeInteractable : BaseGazeInteractable
 {
     private const string WAIT_TO_EXIT_COROUTINE = "WaitToExit_Coroutine";
 
-    public delegate void OnEnter(GazeInteractable interactable, GazeInteractor interactor, Vector3 point);
-    public event OnEnter Enter;
+    //public delegate void OnEnter(GazeInteractable interactable, GazeInteractor interactor, Vector3 point);
+    //public event OnEnter Enter;
 
-    public delegate void OnStay(GazeInteractable interactable, GazeInteractor interactor, Vector3 point);
-    public event OnStay Stay;
+    //public delegate void OnStay(GazeInteractable interactable, GazeInteractor interactor, Vector3 point);
+    //public event OnStay Stay;
 
-    public delegate void OnExit(GazeInteractable interactable, GazeInteractor interactor);
-    public event OnExit Exit;
+    //public delegate void OnExit(GazeInteractable interactable, GazeInteractor interactor);
+    //public event OnExit Exit;
 
-    public delegate void OnActivated(GazeInteractable interactable);
+    //public delegate void OnActivated(GazeInteractable interactable);
+    //public event OnActivated Activated;
+
+    public delegate void OnActivated(BaseFood food);
     public event OnActivated Activated;
 
 
@@ -31,19 +34,21 @@ public class GazeInteractable : MonoBehaviour
     public UnityEvent OnGazeActivated;
     public UnityEvent<bool> OnGazeToggle;
 
+    public UnityEvent<BaseFood> OnGazeActivatedFood;
+
     private Collider col;
   
-    public bool IsEnabled
+    public override bool IsEnabled
     {
         get { return col.enabled; }
         set { col.enabled = value; }
     }
 
-    public bool IsActivable
+    public override bool IsActivable
     {
         get { return _isActivable; }
     }
-    public bool IsActivated { get; private set; }
+    public override bool IsActivated { get; protected set; }
 
     void Start()
     {
@@ -53,32 +58,32 @@ public class GazeInteractable : MonoBehaviour
     /// <summary>
     /// Pone el bool IsActivated a true y llama el UnityEvent OnGazeActivated
     /// </summary>
-    public void Activate()
+    public override void Activate()
     {
         IsActivated = true;
 
-        Activated?.Invoke(this); //delegate
+       // Activated?.Invoke(this); //delegate
         OnGazeActivated?.Invoke(); //UnityEvent
     }
 
-    public void GazeEnter(GazeInteractor interactor, Vector3 point)
+    public override void GazeEnter(GazeInteractor interactor, Vector3 point)
     {
         StopCoroutine(WAIT_TO_EXIT_COROUTINE);
 
-        Enter?.Invoke(this, interactor, point);
+        //Enter?.Invoke(this, interactor, point);
 
         OnGazeEnter?.Invoke();
         //OnGazeToggle?.Invoke(true);
     }
 
-    public void GazeStay(GazeInteractor interactor, Vector3 point)
+    public override void GazeStay(GazeInteractor interactor, Vector3 point)
     {
-        Stay?.Invoke(this, interactor, point); //delegate
+        //Stay?.Invoke(this, interactor, point); //delegate
 
         OnGazeStay?.Invoke(); //UnityEvent
     }
 
-    public void GazeExit(GazeInteractor interactor)
+    public override void GazeExit(GazeInteractor interactor)
     {
         if (gameObject.activeInHierarchy)
         {
@@ -99,7 +104,7 @@ public class GazeInteractable : MonoBehaviour
 
     private void InvokeExit(GazeInteractor interactor)
     {
-        Exit?.Invoke(this, interactor);
+        //Exit?.Invoke(this, interactor);
 
         OnGazeExit?.Invoke();
         OnGazeToggle?.Invoke(false);
