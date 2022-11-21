@@ -37,6 +37,7 @@ public class GazeInteractable : BaseGazeInteractable
     public UnityEvent<BaseFood> OnGazeActivatedFood;
 
     private Collider col;
+
   
     public override bool IsEnabled
     {

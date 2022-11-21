@@ -5,6 +5,9 @@ using UnityEngine;
 public class Ingrediente : BaseFood, IPickeable
 {
     [SerializeField] GameObject modelObject;
+    [SerializeField] GazeInteractable interactable;
+
+  
     public void Drop(Inventory inventory)
     {
         inventory.CleanInventory();

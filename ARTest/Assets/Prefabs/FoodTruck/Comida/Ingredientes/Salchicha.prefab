@@ -60,12 +60,6 @@ MonoBehaviour:
       m_Calls: []
   OnGazeActivated:
     m_PersistentCalls:
-      m_Calls: []
-  OnGazeToggle:
-    m_PersistentCalls:
-      m_Calls: []
-  OnGazeActivatedFood:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4134604781986697350}
         m_TargetAssemblyTypeName: Ingrediente, Assembly-CSharp
@@ -79,6 +73,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnGazeToggle:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGazeActivatedFood:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4134604781986697350
 MonoBehaviour:
   m_ObjectHideFlags: 0

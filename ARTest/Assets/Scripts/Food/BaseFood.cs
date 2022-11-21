@@ -5,6 +5,9 @@ using UnityEngine;
 public abstract class BaseFood : FoodTruckObject
 {
     [SerializeField] protected string foodName;
+    protected Inventory inventory;
+
+    
 
     public string FoodName { get => foodName; set => foodName = value; }
 

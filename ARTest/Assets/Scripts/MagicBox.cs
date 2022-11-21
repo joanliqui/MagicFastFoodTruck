@@ -44,7 +44,6 @@ public class MagicBox : FoodTruckObject, IContainer
         {
             Debug.Log("IsIn");
             inventory.CleanInventory();
-            return;
         }
 
         CheckCompletedRecipe();
@@ -61,7 +60,8 @@ public class MagicBox : FoodTruckObject, IContainer
                 t++;
             }
         }
-        if(t == acceptedIngredients.Count)
+
+        if(t >= acceptedIngredients.Count)
         {
             SpawnFoodBuild();
         }
@@ -71,7 +71,7 @@ public class MagicBox : FoodTruckObject, IContainer
     {
         if (currentRecipe.plate.playePrefab)
         {
-            Instantiate(currentRecipe.plate.playePrefab, buildSocket);
+            Instantiate(currentRecipe.plate.playePrefab, buildSocket.position, Quaternion.identity);
         }
     }
 
@@ -83,6 +83,7 @@ public class MagicBox : FoodTruckObject, IContainer
             {
                 if (!item.isIn)
                 {
+                    
                     IngredientInside(item);
                     return true;
                 }
@@ -98,6 +99,7 @@ public class MagicBox : FoodTruckObject, IContainer
 
     private void IngredientInside(IngredientBox ing)
     {
+        Debug.Log(ing.ingredient.FoodName + " metido");
         ing.isIn = true;
     }
 
