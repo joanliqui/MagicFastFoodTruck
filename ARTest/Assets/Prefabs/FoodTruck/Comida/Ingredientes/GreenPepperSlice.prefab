@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1183214569491436598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1183214569491436602}
+  - component: {fileID: 1183214569491436601}
+  - component: {fileID: 1183214569491436600}
+  - component: {fileID: 1183214569491436599}
+  m_Layer: 0
+  m_Name: GreenPepperSlice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1183214569491436602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183214569491436598}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.07737237, y: 0.568905, z: 1.1313757}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1329497917974094885}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1183214569491436601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183214569491436598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd18ff676b385944a97e90cc853deaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodName: GreenPepperSlice
+  modelObject: {fileID: 1817347462248529567}
+  interactable: {fileID: 0}
+--- !u!114 &1183214569491436600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183214569491436598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dcbf031fb98ef4683e60ce259cfd1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isActivable: 1
+  _exitDelay: 0
+  OnGazeEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGazeStay:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGazeExit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGazeActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGazeToggle:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!65 &1183214569491436599
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183214569491436598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10150181, y: 0.016126394, z: 0.087466836}
+  m_Center: {x: -0.0020643547, y: 0.0046837926, z: 0.0026572347}
+--- !u!1001 &1183214570183976752
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1183214569491436602}
+    m_Modifications:
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25637475
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25637475
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25637475
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 671912116565186991, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_Name
+      value: GreenPepperSliceModel
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e88c61590b214934980c882847da8ffe, type: 3}
+--- !u!4 &1329497917974094885 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
+  m_PrefabInstance: {fileID: 1183214570183976752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1817347462248529567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 671912116565186991, guid: e88c61590b214934980c882847da8ffe, type: 3}
+  m_PrefabInstance: {fileID: 1183214570183976752}
+  m_PrefabAsset: {fileID: 0}

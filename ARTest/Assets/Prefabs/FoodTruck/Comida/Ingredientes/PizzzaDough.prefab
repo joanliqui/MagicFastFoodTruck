@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6373411351584466768
+--- !u!1 &38193215321562257
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,55 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6373411351584466771}
-  - component: {fileID: 6373411351584466770}
-  - component: {fileID: 6373411351584466769}
-  - component: {fileID: 2073677999}
+  - component: {fileID: 1524464870884772380}
+  - component: {fileID: 2858761948207789431}
+  - component: {fileID: 5197958693481167067}
+  - component: {fileID: 6649093013990820434}
   m_Layer: 0
-  m_Name: HotDog
+  m_Name: PizzzaDough
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6373411351584466771
+--- !u!4 &1524464870884772380
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6373411351584466768}
-  m_LocalRotation: {x: 0, y: 0, z: -0.41435966, w: 0.9101132}
-  m_LocalPosition: {x: -0.532, y: 0.5953, z: 1.134}
+  m_GameObject: {fileID: 38193215321562257}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.65817606, y: 0.5817378, z: 1.7695674}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7654958680291098098}
+  - {fileID: 8541019495934639938}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -48.958}
---- !u!114 &6373411351584466770
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2858761948207789431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6373411351584466768}
+  m_GameObject: {fileID: 38193215321562257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd18ff676b385944a97e90cc853deaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodName: PizzaDough
+  modelObject: {fileID: 7873563194406978378}
+  interactable: {fileID: 0}
+--- !u!114 &5197958693481167067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38193215321562257}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74dcbf031fb98ef4683e60ce259cfd1c, type: 3}
@@ -64,35 +79,20 @@ MonoBehaviour:
   OnGazeToggle:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6373411351584466769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6373411351584466768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cd18ff676b385944a97e90cc853deaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodName: HotDog
-  modelObject: {fileID: 7021165627355916104}
-  interactable: {fileID: 0}
---- !u!65 &2073677999
+--- !u!65 &6649093013990820434
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6373411351584466768}
+  m_GameObject: {fileID: 38193215321562257}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.09988046, y: 0.08907688, z: 0.23841059}
-  m_Center: {x: -0.0022559166, y: 0.003567934, z: 0.0013893247}
---- !u!1 &7021165627355916104
+  m_Size: {x: 0.24215013, y: 0.029172182, z: 0.2387842}
+  m_Center: {x: 0.00024721026, y: 0.0009571314, z: 0.0004785657}
+--- !u!1 &7873563194406978378
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,46 +100,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7654958680291098098}
-  - component: {fileID: 6743080280497861207}
-  - component: {fileID: 8822776520164820637}
+  - component: {fileID: 8541019495934639938}
+  - component: {fileID: 8530128635166304681}
+  - component: {fileID: 1818166892693711034}
   m_Layer: 0
-  m_Name: HotDogModel
+  m_Name: PizzaDoughModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7654958680291098098
+--- !u!4 &8541019495934639938
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7021165627355916104}
-  m_LocalRotation: {x: 0.00000006807379, y: -0.99995935, z: -0.00901943, w: 0.00000022438049}
+  m_GameObject: {fileID: 7873563194406978378}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.029567316, y: 0.029567318, z: 0.06980913}
+  m_LocalScale: {x: 11.651, y: 1.281505, z: 11.651}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6373411351584466771}
+  m_Father: {fileID: 1524464870884772380}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -1.034, y: -180, z: 0}
---- !u!33 &6743080280497861207
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8530128635166304681
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7021165627355916104}
-  m_Mesh: {fileID: 3911863160471375708, guid: c1fcf41453bdfc64fba05c6d6bc8d6d1, type: 3}
---- !u!23 &8822776520164820637
+  m_GameObject: {fileID: 7873563194406978378}
+  m_Mesh: {fileID: -4428754836550342530, guid: 300e4384aa660b244bb22cf13eb2eed7, type: 3}
+--- !u!23 &1818166892693711034
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7021165627355916104}
+  m_GameObject: {fileID: 7873563194406978378}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -153,7 +153,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6797292481738752546, guid: c1fcf41453bdfc64fba05c6d6bc8d6d1, type: 3}
+  - {fileID: -787676543628028291, guid: 300e4384aa660b244bb22cf13eb2eed7, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

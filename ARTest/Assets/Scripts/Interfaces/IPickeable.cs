@@ -5,7 +5,7 @@ using UnityEngine;
 public interface IPickeable
 {
     GameObject gameObject { get; }
-    public void Pick(Inventory inventory);
+    public void Pick();
 
-    public void Drop(Inventory inventory);
+    public void Drop();
 }

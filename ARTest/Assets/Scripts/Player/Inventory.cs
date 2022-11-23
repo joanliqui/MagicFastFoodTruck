@@ -7,18 +7,43 @@ public class Inventory : MonoBehaviour
     private IPickeable _currentObject;
     [SerializeField] MeshFilter inventoryObjectModel;
     [SerializeField] GazeInteractor interactor;
+    private Tool cntTool;
+
+    public IPickeable CurrentObject 
+    { 
+        get 
+        {
+            return _currentObject;
+        }  
+        set 
+        { 
+            if(value.gameObject.TryGetComponent<Tool>(out Tool t))
+            {
+                Debug.Log("Is a tool: " + t.name);
+                cntTool = t;
+                _currentObject = value; 
+            }
+            else
+            {
+                _currentObject = value; 
+            }
+        }  
+    }
+
+    public Tool CntTool { get => cntTool; set => cntTool = value; }
 
     private void Start()
     {
         EnableModel(false);
     }
 
-    public void AddToInventory(IPickeable pick, Vector3 scale)
+    public void AddToInventory(IPickeable pick, Vector3 scale, Quaternion rotation)
     {
-        _currentObject = pick;
+        CurrentObject = pick;
         Mesh mesh = pick.gameObject.GetComponentInChildren<MeshFilter>().mesh;
         inventoryObjectModel.mesh = mesh;
         inventoryObjectModel.transform.localScale = scale;
+        inventoryObjectModel.transform.localRotation = rotation;
         EnableModel(true);
     }
 

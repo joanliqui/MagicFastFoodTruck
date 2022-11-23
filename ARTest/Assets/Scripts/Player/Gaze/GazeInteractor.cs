@@ -51,6 +51,7 @@ public class GazeInteractor : MonoBehaviour
                 Reset();
                 return;
             }
+
             if(inter != interactable)
             {
                 Reset();

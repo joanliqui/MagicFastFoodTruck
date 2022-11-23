@@ -24,7 +24,7 @@ public class GazeInteractable : BaseGazeInteractable
 
 
     [Header("Configuration")]
-    [SerializeField] private bool _isActivable;
+    [SerializeField] private bool _isActivable = true;
     [SerializeField] private float _exitDelay;
 
     [Header("Events")]
@@ -33,8 +33,6 @@ public class GazeInteractable : BaseGazeInteractable
     public UnityEvent OnGazeExit;
     public UnityEvent OnGazeActivated;
     public UnityEvent<bool> OnGazeToggle;
-
-    public UnityEvent<BaseFood> OnGazeActivatedFood;
 
     private Collider col;
 
