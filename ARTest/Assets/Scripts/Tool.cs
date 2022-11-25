@@ -38,6 +38,17 @@ public class Tool : FoodTruckObject, IPickeable
         return true;
     }
 
+    public bool Equals(Tool other)
+    {
+        if (other == null)
+            return false;
+        else if(toolName != other.toolName)
+            return false;
+
+        return true;
+        
+    }
+
     public void Pick()
     {
         if(rotator!= null)

@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
     private IPickeable _pickableObject;
     
     [SerializeField] GazeInteractor interactor;
-    private Tool cntTool;
+    private Tool _cntTool;
     
     [SerializeField] Transform socketObj;
     [SerializeField] Material holoMat;
@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
             if(value.gameObject.TryGetComponent<Tool>(out Tool t))
             {
                 Debug.Log("Is a tool: " + t.name);
-                cntTool = t;
+                _cntTool = t;
             }
             
             _pickableObject = value; 
@@ -33,7 +33,7 @@ public class Inventory : MonoBehaviour
         }  
     }
 
-    public Tool CntTool { get => cntTool; set => cntTool = value; }
+    public Tool CntTool { get => _cntTool; set => _cntTool = value; }
 
     private void Start()
     {
@@ -135,6 +135,8 @@ public class Inventory : MonoBehaviour
     public void CleanInventory()
     {
         _pickableObject = null;
+        _cntTool = null;
+
         if(socketObj.childCount > 0)
         {
             Destroy(socketObj.GetChild(0).gameObject);
