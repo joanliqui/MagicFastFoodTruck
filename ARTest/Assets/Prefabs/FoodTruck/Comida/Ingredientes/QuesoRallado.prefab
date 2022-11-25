@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3427304485431087267}
   - component: {fileID: -7677897670470368457}
-  - component: {fileID: 4297017249503615268}
   - component: {fileID: 579849515496260097}
+  - component: {fileID: 4297017249503615268}
   m_Layer: 0
   m_Name: QuesoRallado
   m_TagString: Untagged
@@ -50,19 +50,6 @@ MonoBehaviour:
   foodName: QuesoRallado
   modelObject: {fileID: 4289861678302626282}
   interactable: {fileID: 0}
---- !u!65 &4297017249503615268
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2747895573824497212}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.043346405, y: 0.0056810975, z: 0.039299607}
-  m_Center: {x: -0.002490282, y: 0.00077822804, z: 0.0014007688}
 --- !u!114 &579849515496260097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,19 +66,56 @@ MonoBehaviour:
   _exitDelay: 0
   OnGazeEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -7677897670470368457}
+        m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
+        m_MethodName: ToogleGlow
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnGazeStay:
     m_PersistentCalls:
       m_Calls: []
   OnGazeExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -7677897670470368457}
+        m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
+        m_MethodName: ToogleGlow
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnGazeActivated:
     m_PersistentCalls:
       m_Calls: []
   OnGazeToggle:
     m_PersistentCalls:
       m_Calls: []
+--- !u!65 &4297017249503615268
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2747895573824497212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07279895, y: 0.012105405, z: 0.0685572}
+  m_Center: {x: -0.0074640587, y: 0.0039048493, z: 0.0010106266}
 --- !u!1 &4289861678302626282
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4289861678302626282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.0049, z: 0}
   m_LocalScale: {x: 23.494238, y: 16.886978, z: 23.494238}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -153,7 +177,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d30b3cba3a0f8f64887f627f03417e63, type: 2}
+  - {fileID: 2100000, guid: 70e28418bae4c924eb3fca575f2ab864, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

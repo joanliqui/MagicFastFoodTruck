@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7269868710122420722}
   - component: {fileID: 7269868710122420721}
-  - component: {fileID: 7269868710122420720}
   - component: {fileID: 7269868710122420727}
+  - component: {fileID: 7269868710122420720}
   m_Layer: 0
   m_Name: Mustard
   m_TagString: Untagged
@@ -48,6 +48,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.102908894, y: 0.16471854, z: 0.10057628}
   m_Center: {x: -0.0005831048, y: 0.06764074, z: -0.0017493367}
+--- !u!114 &7269868710122420727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7269868710122420726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd18ff676b385944a97e90cc853deaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodName: Mustard
+  modelObject: {fileID: 7546843581085994402}
+  interactable: {fileID: 0}
 --- !u!114 &7269868710122420720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,34 +79,43 @@ MonoBehaviour:
   _exitDelay: 0
   OnGazeEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7269868710122420727}
+        m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
+        m_MethodName: ToogleGlow
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnGazeStay:
     m_PersistentCalls:
       m_Calls: []
   OnGazeExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7269868710122420727}
+        m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
+        m_MethodName: ToogleGlow
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnGazeActivated:
     m_PersistentCalls:
       m_Calls: []
   OnGazeToggle:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7269868710122420727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7269868710122420726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cd18ff676b385944a97e90cc853deaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodName: Mustard
-  modelObject: {fileID: 7546843581085994402}
-  interactable: {fileID: 0}
 --- !u!1 &7546843581085994402
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +177,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6797292481738752546, guid: 9562c619918d86348b701bd1bdcbd31e, type: 3}
+  - {fileID: 2100000, guid: 514af54a6ed589b4896416a7ffb04706, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

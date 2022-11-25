@@ -16,6 +16,7 @@ public class Tool : FoodTruckObject, IPickeable
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         interactable = GetComponent<GazeInteractable>();
         givingScale = new Vector3(scaleModel, scaleModel, scaleModel);
+        mat = GetComponentInChildren<MeshRenderer>().material;
 
         interactable.OnGazeActivated.AddListener(Pick);
     }
@@ -39,6 +40,13 @@ public class Tool : FoodTruckObject, IPickeable
 
     public void Pick()
     {
-        inventory.AddToInventory(this, givingScale, rotator.localRotation);
+        if(rotator!= null)
+        {
+            inventory.AddToInventory(this, givingScale, rotator.localRotation, mat);
+        }
+        else
+        {
+            inventory.AddToInventory(this, givingScale, Quaternion.identity, mat);
+        }
     }
 }

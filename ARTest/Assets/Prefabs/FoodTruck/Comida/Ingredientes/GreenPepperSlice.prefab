@@ -66,13 +66,37 @@ MonoBehaviour:
   _exitDelay: 0
   OnGazeEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1183214569491436601}
+        m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
+        m_MethodName: ToogleGlow
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnGazeStay:
     m_PersistentCalls:
       m_Calls: []
   OnGazeExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1183214569491436601}
+        m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
+        m_MethodName: ToogleGlow
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnGazeActivated:
     m_PersistentCalls:
       m_Calls: []
@@ -121,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0034
       objectReference: {fileID: 0}
     - target: {fileID: 151095085702202133, guid: e88c61590b214934980c882847da8ffe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -159,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenPepperSliceModel
       objectReference: {fileID: 0}
+    - target: {fileID: 1320646448463329402, guid: e88c61590b214934980c882847da8ffe, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6dfc1da88d949214ea230c7b6f7b791e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e88c61590b214934980c882847da8ffe, type: 3}
 --- !u!4 &1329497917974094885 stripped

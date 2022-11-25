@@ -8,12 +8,13 @@ public class IngredienteCortable : BaseFood, ICutable, IPickeable
     [SerializeField] string neededTool = "Knife";
     [SerializeField] GameObject modelObject;
     [SerializeField] GameObject cutedObject;
-    GazeInteractable interactable; 
+    GazeInteractable interactable;
     private new void Start()
     {
         base.Start();
         mat = modelObject.GetComponent<MeshRenderer>().material;
         interactable = GetComponent<GazeInteractable>();
+
         interactable.OnGazeActivated.AddListener(Activated);
     }
 
@@ -51,7 +52,7 @@ public class IngredienteCortable : BaseFood, ICutable, IPickeable
 
     public void Pick()
     {
-        inventory.AddToInventory(this, modelObject.transform.localScale, transform.localRotation);
+        inventory.AddToInventory(this, modelObject.transform.localScale, transform.localRotation, mat);
     }
 
     private bool CanBeCuted()

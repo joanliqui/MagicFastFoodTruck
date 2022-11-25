@@ -6,6 +6,8 @@ public abstract class BaseFood : FoodTruckObject
 {
     [SerializeField] protected string foodName;
     protected Inventory inventory;
+    protected bool isInTable = false;
+    
 
     public string FoodName { get => foodName; set => foodName = value; }
 
@@ -17,6 +19,12 @@ public abstract class BaseFood : FoodTruckObject
     protected void SetInventory()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+    }
+
+    public void AvtivateComponents()
+    {
+        GetComponent<Collider>().enabled = true;
+        GetComponent<BaseFood>().enabled = true;
     }
     public override bool Equals(object obj)
     {

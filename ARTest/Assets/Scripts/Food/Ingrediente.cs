@@ -11,6 +11,8 @@ public class Ingrediente : BaseFood, IPickeable
     {
         base.Start();
         interactable = GetComponent<GazeInteractable>();
+        mat = modelObject.GetComponent<MeshRenderer>().material;
+
         interactable.OnGazeActivated.AddListener(InteractWithIngredient);
     }
 
@@ -29,6 +31,6 @@ public class Ingrediente : BaseFood, IPickeable
 
     public void Pick()
     {
-        inventory.AddToInventory(this, modelObject.transform.localScale, transform.localRotation);
+        inventory.AddToInventory(this, Vector3.one, transform.localRotation, mat);
     }
 }

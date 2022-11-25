@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GreenPepper
+  m_Name: PepperSlice_Mat
   m_Shader: {fileID: -6465566751694194690, guid: 6fc95076b830e5442bc4a549d6d521ea, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -58,5 +58,6 @@ Material:
     - _QueueOffset: 0
     - _canShine: 0
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
     - _Color: {r: 1.5365998, g: 0.85466194, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -51,32 +51,41 @@ MonoBehaviour:
   _exitDelay: 0
   OnGazeEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4134604781986697350}
+        m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
+        m_MethodName: ToogleGlow
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnGazeStay:
     m_PersistentCalls:
       m_Calls: []
   OnGazeExit:
     m_PersistentCalls:
-      m_Calls: []
-  OnGazeActivated:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4134604781986697350}
-        m_TargetAssemblyTypeName: Ingrediente, Assembly-CSharp
-        m_MethodName: Pick
-        m_Mode: 2
+        m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
+        m_MethodName: ToogleGlow
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: Inventory, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnGazeToggle:
+  OnGazeActivated:
     m_PersistentCalls:
       m_Calls: []
-  OnGazeActivatedFood:
+  OnGazeToggle:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &4134604781986697350
@@ -93,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: Salchica
   modelObject: {fileID: 3864221474093557270}
+  interactable: {fileID: 0}
 --- !u!65 &1782627443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -104,8 +114,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2653407, y: 0.06064713, z: 0.068760514}
-  m_Center: {x: 0.0031571388, y: 0.0061861873, z: 0.0030030608}
+  m_Size: {x: 0.2653407, y: 0.041911423, z: 0.068760514}
+  m_Center: {x: 0.0031571388, y: 0.019430429, z: 0.0030030608}
 --- !u!1001 &4134604783191677767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -123,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ee3e00dc769a0c4895dbfc30c6a03bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ee3e00dc769a0c4895dbfc30c6a03bd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -157,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4ee3e00dc769a0c4895dbfc30c6a03bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e9069c0d2824924d966278d013cc062, type: 2}
     - target: {fileID: 919132149155446097, guid: 4ee3e00dc769a0c4895dbfc30c6a03bd, type: 3}
       propertyPath: m_Name
       value: SalchichaModel
