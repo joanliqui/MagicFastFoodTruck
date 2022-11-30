@@ -58,10 +58,10 @@ public class GazeInteractableFood : BaseGazeInteractable
     public override void GazeEnter(GazeInteractor interactor, Vector3 point)
     {
         StopCoroutine(WAIT_TO_EXIT_COROUTINE);
-
+        food = inventory.GetCurrentObjectAsFood();
         //Enter?.Invoke(this, interactor, point);
-        if(food)
-            OnGazeEnter?.Invoke(inventory.GetCurrentObjectAsFood());
+        if (food)
+            OnGazeEnter?.Invoke(food);
         //OnGazeToggle?.Invoke(true);
     }
 

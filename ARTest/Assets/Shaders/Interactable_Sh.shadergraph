@@ -1205,10 +1205,10 @@
     "m_Guid": {
         "m_GuidSerialized": "b55bff94-88cb-4600-bb3a-864b06493d51"
     },
-    "m_Name": "Color",
+    "m_Name": "ShineColor",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Color",
-    "m_DefaultReferenceName": "_Color",
+    "m_RefNameGeneratedByDisplayName": "ShineColor",
+    "m_DefaultReferenceName": "_ShineColor",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -1848,7 +1848,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "81b24912ff0a4038a1f746e256131e72",
     "m_Id": 0,
-    "m_DisplayName": "Color",
+    "m_DisplayName": "ShineColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

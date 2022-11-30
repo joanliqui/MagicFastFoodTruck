@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,17 +26,25 @@ public class MagicBox : FoodTruckObject, IContainer
     GazeInteractableFood gazeInteractable;
     [SerializeField] List<IngredientBox> acceptedIngredients;
     [SerializeField] Transform buildSocket;
-    
+    [ColorUsage(false, true)]
+    [SerializeField] Color errorColor;
+    [ColorUsage(true, true)]
+    private Color matNormalColor;
 
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         gazeInteractable = GetComponent<GazeInteractableFood>();
+        mat = GetComponent<MeshRenderer>().material;
+
+        if (mat.HasProperty("_ShineColor"))
+        {
+            matNormalColor = mat.GetColor("_ShineColor");
+        }
+
         //Suscripcion a los eventos
-
         gazeInteractable.OnGazeActivated.AddListener(PutIn);
-
-        UpdateIngredientBoxList();
+        gazeInteractable.OnGazeEnter.AddListener(ActivateGlow);
     }
 
     public void PutIn(BaseFood food)
@@ -103,15 +112,42 @@ public class MagicBox : FoodTruckObject, IContainer
         ing.isIn = true;
     }
 
-    public void UpdateIngredientBoxList()
+    public void UpdateIngredientBoxList(RecipeSO recipe)
     {
+        currentRecipe = recipe;
         acceptedIngredients = new List<IngredientBox>();
-        foreach (BaseFood item in currentRecipe.ingredients)
+        foreach (BaseFood item in recipe.ingredients)
         {
             IngredientBox ing = new IngredientBox(item);
             acceptedIngredients.Add(ing);
         }
     }
+
+
+    public void ActivateGlow(BaseFood food)
+    {
+        if(mat != null)
+        {
+            if(food != null)
+            {
+                foreach (IngredientBox item in acceptedIngredients)
+                {
+                    if (item.ingredient.Equals(food))
+                    {
+                        if (!item.isIn)
+                        {
+                            mat.SetColor("_ShineColor", matNormalColor);
+                            mat.SetInt(_canShinePropertie, 1);
+                            return;
+                        }
+                    }
+                }
+            }
+            mat.SetColor("_ShineColor", errorColor);
+            mat.SetInt(_canShinePropertie, 1);
+        }
+    }
+
 }
 
 

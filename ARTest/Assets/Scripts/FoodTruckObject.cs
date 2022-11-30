@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract class FoodTruckObject : MonoBehaviour
 {
     protected Material mat;
-    private const string _canShinePropertie = "_canShine";
+    protected const string _canShinePropertie = "_canShine";
 
     public virtual void ToogleGlow(bool glow)
     {

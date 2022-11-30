@@ -16,7 +16,7 @@ public class ToolContainer : FoodTruckObject
         inter = GetComponent<GazeInteractable>();
         inv = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         col = GetComponent<Collider>();
-        mat = mesh.material;
+        mat = mesh.sharedMaterial;
 
         toolIn = true;
         col.enabled = false;

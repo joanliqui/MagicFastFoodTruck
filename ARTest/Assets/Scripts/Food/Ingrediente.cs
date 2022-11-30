@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ingrediente : BaseFood, IPickeable
 {
     [SerializeField] GameObject modelObject;
-    [SerializeField] GazeInteractable interactable;
+    private GazeInteractable interactable;
 
     private new void Start()
     {
