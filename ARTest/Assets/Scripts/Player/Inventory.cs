@@ -6,13 +6,13 @@ public class Inventory : MonoBehaviour
 {
     private IPickeable _pickableObject;
     
-    [SerializeField] GazeInteractor interactor;
+    
     private Tool _cntTool;
     
     [SerializeField] Transform socketObj;
     [SerializeField] Material holoMat;
 
-    [SerializeField] MeshFilter inventoryObjectModel;
+    //[SerializeField] MeshFilter inventoryObjectModel;
 
     public IPickeable PickableObject 
     { 
@@ -37,19 +37,19 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        EnableModel(false);
+        //EnableModel(false);
     }
 
     //Primera verision quew actuializa solo la mesh
-    public void AddToInventory(IPickeable pick, Vector3 scale, Quaternion rotation)
-    {
-        PickableObject = pick;
-        Mesh mesh = pick.gameObject.GetComponentInChildren<MeshFilter>().mesh;
-        inventoryObjectModel.mesh = mesh;
-        inventoryObjectModel.transform.localScale = scale;
-        inventoryObjectModel.transform.localRotation = rotation;
-        EnableModel(true);
-    }
+    //public void AddToInventory(IPickeable pick, Vector3 scale, Quaternion rotation)
+    //{
+    //    PickableObject = pick;
+    //    Mesh mesh = pick.gameObject.GetComponentInChildren<MeshFilter>().mesh;
+    //    inventoryObjectModel.mesh = mesh;
+    //    inventoryObjectModel.transform.localScale = scale;
+    //    inventoryObjectModel.transform.localRotation = rotation;
+    //    EnableModel(true);
+    //}
 
     //Segunda version que instancia un objeto nuevo
     public void AddToInventory(IPickeable pick, Vector3 scale, Quaternion rotation, Material originalMat)
@@ -57,9 +57,12 @@ public class Inventory : MonoBehaviour
         //Si ya tenemos un objeto, lo eliminamos
         if(PickableObject != null)
         {
-            Destroy(PickableObject.gameObject);
+            if(_pickableObject.gameObject.GetComponent<Tool>() == false) //Si no tenemos una tool en la mano
+            {
+                Destroy(PickableObject.gameObject);
+            }
         }
-
+        //Desactivamos el objeto que estaba en la posicion inicial
         pick.gameObject.SetActive(false);
 
         //Instanciar el nuevo objeto
@@ -74,63 +77,12 @@ public class Inventory : MonoBehaviour
         {
             bf.enabled = false;
         }
-
-        #region OLD
-
-        //if (inventoryObjectModel.gameObject.activeInHierarchy)
-        //{
-        //    inventoryObjectModel.gameObject.SetActive(false);
-        //}
-        //if(socketObj.childCount > 0)
-        //{
-        //    foreach (Transform item in socketObj)
-        //    {
-        //        Destroy(item);
-        //    }
-        //}
-
-        //CurrentObject = pick;
-        //GameObject g = null;
-
-        //if(pick.gameObject.TryGetComponent<BaseFood>(out BaseFood b))
-        //{
-        //    foreach (BaseFood item in IngredientListManager.Instance.IngredientManager.allIngredients)
-        //    {
-        //        if (b.Equals(item))
-        //        {
-        //            g = item.gameObject;
-        //        }
-        //    }
-        //    GameObject o = Instantiate(g, Vector3.zero, rotation, socketObj);
-        //    o.transform.localPosition = Vector3.zero;
-        //    o.GetComponent<BaseFood>().enabled = false;
-        //    o.GetComponent<Collider>().enabled = false;
-        //    o.GetComponent<BaseGazeInteractable>().enabled = false;
-        //    o.GetComponentInChildren<MeshRenderer>().material = holoMat;
-        //}
-        //else if(pick.gameObject.TryGetComponent<Tool>(out Tool t))
-        //{
-        //    foreach (Tool item in IngredientListManager.Instance.IngredientManager.allTools)
-        //    {
-        //        if (b.Equals(item))
-        //        {
-        //            g = item.gameObject;
-        //        }
-        //    }
-        //    GameObject o = Instantiate(g, Vector3.zero, rotation, socketObj);
-        //    o.transform.localPosition = Vector3.zero;
-        //    o.GetComponent<Tool>().enabled = false;
-        //    o.GetComponent<Collider>().enabled = false;
-        //    o.GetComponent<BaseGazeInteractable>().enabled = false;
-        //    o.GetComponentInChildren<MeshRenderer>().material = holoMat;
-        //}
-        #endregion
     }
 
-    public void EnableModel(bool enable)
-    {
-        inventoryObjectModel.gameObject.SetActive(enable);
-    }
+    //public void EnableModel(bool enable)
+    //{
+    //    inventoryObjectModel.gameObject.SetActive(enable);
+    //}
 
     public void CleanInventory()
     {

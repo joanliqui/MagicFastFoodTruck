@@ -22,7 +22,10 @@ public class Bin : FoodTruckObject, IContainer
 
     private void DeleteFood()
     {
-        inventory.CleanInventory();
+        if(inventory != null)
+        {
+            inventory.CleanInventory();
+        }
     }
 
 }

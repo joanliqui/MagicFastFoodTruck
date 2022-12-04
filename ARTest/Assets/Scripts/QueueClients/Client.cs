@@ -102,6 +102,11 @@ public class Client : MonoBehaviour
             case ClientState.WaitingToFoodRequested:
                 break;
             case ClientState.HaveFood:
+                if (move)
+                {
+                    isWalking = true;
+                    transform.position += transform.forward * speed * Time.deltaTime;
+                }
                 break;
            
         }
@@ -112,8 +117,11 @@ public class Client : MonoBehaviour
     public void InicializeClient()
     {
         rend.material.color = UnityEngine.Random.ColorHSV();
+        move = false;
+        isWalking = false;
         bocadilloObject.SetActive(false);
         platoImage.sprite = null;
+        clientState = ClientState.OnQueue;
         RandomPlate();
     }
     private void RandomPlate()
@@ -133,9 +141,19 @@ public class Client : MonoBehaviour
             inv.CleanInventory();
             bocadilloObject.SetActive(false);
             clientState = ClientState.HaveFood;
-            OnFoodCorrect?.Invoke();
+            StartCoroutine(LeavePlace());
         }
     }
+
+    IEnumerator LeavePlace()
+    {
+        anim.SetTrigger(waveHash);
+        SoloGameManager.Instance.AddPoints(1);
+        yield return new WaitForSeconds(1.5f);
+        move = true;
+        OnFoodCorrect?.Invoke();
+    }
+
 
 
     public void MoveTo(Vector3 pos, Action OnPosArrived = null)
@@ -147,14 +165,9 @@ public class Client : MonoBehaviour
         move = true;
     }
 
-    private void ActivateRequestUI()
-    {
-        bocadilloObject.SetActive(true);
-        platoImage.sprite = wantedPlate.plate.plateImage;
 
-    }
-
-    //Action added from the RequesPoint Script
+    //Action added from the RequesPoint Script.
+    //Al llegar al punto saluda y pide la comida, actualizando la caravana.
     public void OnRequestPoint()
     {
         clientState = ClientState.OnPointToRequest;
@@ -162,5 +175,11 @@ public class Client : MonoBehaviour
         col.enabled = true;
         ActivateRequestUI();
         van.UpdateVanClientRequest(wantedPlate);
+    }
+    private void ActivateRequestUI()
+    {
+        bocadilloObject.SetActive(true);
+        platoImage.sprite = wantedPlate.plate.plateImage;
+
     }
 }

@@ -20,11 +20,11 @@ public class ToolContainer : FoodTruckObject
 
         toolIn = true;
         col.enabled = false;
-
-        inter.OnGazeActivated.AddListener(Interact);
+        if(inter != null)
+            inter.OnGazeActivated.AddListener(Interact);
     }
 
-    private void Interact()
+    public void Interact()
     {
         if (!toolIn)
         {
@@ -34,11 +34,14 @@ public class ToolContainer : FoodTruckObject
 
     private void AddTool()
     {
-        if (inv.CntTool.Equals(tool))
+        if(inv != null)
         {
-            tool.gameObject.SetActive(true);
-            col.enabled = false;
-            inv.CleanInventory();
+            if (inv.CntTool.Equals(tool))
+            {
+                tool.gameObject.SetActive(true);
+                col.enabled = false;
+                inv.CleanInventory();
+            }
         }
     }
 

@@ -60,9 +60,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd18ff676b385944a97e90cc853deaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 0}
   foodName: Mustard
+  foodSprite: {fileID: 21300000, guid: a83d194adba0a884ca627b793ef0654d, type: 3}
   modelObject: {fileID: 7546843581085994402}
-  interactable: {fileID: 0}
 --- !u!114 &7269868710122420720
 MonoBehaviour:
   m_ObjectHideFlags: 0

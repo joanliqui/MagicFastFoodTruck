@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,9 +8,10 @@ public abstract class BaseFood : FoodTruckObject
     [SerializeField] protected string foodName;
     protected Inventory inventory;
     protected bool isInTable = false;
-    
-
+    public Action OnTakenFood;
+    public Sprite foodSprite;
     public string FoodName { get => foodName; set => foodName = value; }
+
 
     protected void Start()
     {
@@ -21,7 +23,7 @@ public abstract class BaseFood : FoodTruckObject
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
-    public void AvtivateComponents()
+    public void ActivateComponents()
     {
         GetComponent<Collider>().enabled = true;
         GetComponent<BaseFood>().enabled = true;
@@ -37,5 +39,5 @@ public abstract class BaseFood : FoodTruckObject
             return false;
 
         return true;
-    }
+    } 
 }

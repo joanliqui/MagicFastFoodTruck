@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WorkingTable : FoodTruckObject, IContainer
 {
+    public bool isVR = true;
     [System.Serializable]
     private class TableSockets
     {
@@ -18,17 +19,23 @@ public class WorkingTable : FoodTruckObject, IContainer
 
     private void Start()
     {
-        interactable = GetComponent<GazeInteractableFood>();
         inv = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-
-        interactable.OnGazeActivated.AddListener(PutIn);
+        if (isVR)
+        {
+            interactable = GetComponent<GazeInteractableFood>();
+            if(interactable != null)
+            {
+                interactable.OnGazeActivated.AddListener(PutIn);
+            }
+        }
     }
     public void PutIn(BaseFood food)
     {
         if (food != null)
         {
             SetFoodOnTable(food);
-            inv.CleanInventory();
+            if(inv != null)
+                inv.CleanInventory();
         }
     }
 
@@ -40,23 +47,19 @@ public class WorkingTable : FoodTruckObject, IContainer
             {
                 food.gameObject.transform.parent = null;
                 food.gameObject.transform.SetPositionAndRotation(sockets[i].socketTransform.position, sockets[i].socketTransform.rotation);
-                food.AvtivateComponents();
+                food.ActivateComponents();
+                if(food.TryGetComponent<IngredienteCortable>(out IngredienteCortable ic))
+                {
+                    ic.onFoodCut += ctx => 
+                    {
+                        ctx.OnTakenFood += () => sockets[i].isFull = false;
+                    };
+                }
+                food.OnTakenFood += () => sockets[i].isFull = false;
                 sockets[i].isFull = true;
                 return;
-                //foreach (BaseFood item in IngredientListManager.Instance.IngredientManager.allIngredients)
-                //{
-                //    if (food.Equals(item))
-                //    {
-                //        GameObject o = Instantiate(item.gameObject, sockets[i].socketTransform.position, sockets[i].socketTransform.rotation);
-                //        o.GetComponent<BaseFood>().SetInTable(true);
-                //        sockets[i].isFull = true;
-
-                //        return;
-                //    }
-                //}
             }
         }
     }
 
-  
 }

@@ -100,9 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd18ff676b385944a97e90cc853deaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 0}
   foodName: TomatoSlice
+  foodSprite: {fileID: 21300000, guid: 6a65e98cc7e0ed44c8ac861e942fcfc6, type: 3}
   modelObject: {fileID: 6064716143057751597}
-  interactable: {fileID: 0}
 --- !u!65 &7796569761106795931
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -8,8 +8,8 @@ public class QueueManager : MonoBehaviour
     //Indexes of the List matches
     [SerializeField] List<Transform> queuePoints; //Point on Queue
     private List<Client> queueClients = new List<Client>(); //Clients on Queue
-
     [SerializeField] RequestPoint finalPoint; //Entrance Position
+
     void Start()
     {
         InstantiateQueue();
@@ -34,7 +34,12 @@ public class QueueManager : MonoBehaviour
 
     public void AddClient()
     {
-        GameObject o = Instantiate(client.gameObject, queuePoints[queuePoints.Count - 1].position, queuePoints[queuePoints.Count - 1].rotation);
+        if (CanAddClient())
+        {
+            GameObject o = Instantiate(client.gameObject, queuePoints[queuePoints.Count - 1].position, queuePoints[queuePoints.Count - 1].rotation);
+            Client c = o.GetComponent<Client>();
+            c.InicializeClient();
+        }
     }
 
     public Client GetFirstClient()

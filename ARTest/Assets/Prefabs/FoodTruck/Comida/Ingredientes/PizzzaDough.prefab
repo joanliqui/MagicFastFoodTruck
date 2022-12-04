@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 38193215321562257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.65817606, y: 0.5817378, z: 1.7695674}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6923043, y: 0.73763925, z: 0.81900084}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8541019495934639938}
@@ -47,9 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd18ff676b385944a97e90cc853deaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 0}
   foodName: PizzaDough
+  foodSprite: {fileID: 21300000, guid: 8c2432922eb41554ea446d00f6bd67b0, type: 3}
   modelObject: {fileID: 7873563194406978378}
-  interactable: {fileID: 0}
 --- !u!114 &5197958693481167067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,8 +115,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.24215013, y: 0.03255838, z: 0.2387842}
-  m_Center: {x: 0.00024721026, y: 0.013285428, z: 0.0004785657}
+  m_Size: {x: 0.29734886, y: 0.0250988, z: 0.29472876}
+  m_Center: {x: -0.00049871206, y: 0.011793494, z: -0.002878189}
 --- !u!1 &7873563194406978378
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,8 +143,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7873563194406978378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.011, z: 0}
-  m_LocalScale: {x: 11.651, y: 1.281505, z: 11.651}
+  m_LocalPosition: {x: 0, y: 0.018, z: 0}
+  m_LocalScale: {x: 14.622103, y: 0.7251954, z: 14.622103}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1524464870884772380}

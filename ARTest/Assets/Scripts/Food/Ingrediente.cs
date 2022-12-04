@@ -12,11 +12,11 @@ public class Ingrediente : BaseFood, IPickeable
         base.Start();
         interactable = GetComponent<GazeInteractable>();
         mat = modelObject.GetComponent<MeshRenderer>().material;
-
-        interactable.OnGazeActivated.AddListener(InteractWithIngredient);
+        if(interactable != null)
+            interactable.OnGazeActivated.AddListener(InteractWithIngredient);
     }
 
-    private void InteractWithIngredient()
+    public void InteractWithIngredient()
     {
         if (inventory != null)
         {
@@ -31,6 +31,10 @@ public class Ingrediente : BaseFood, IPickeable
 
     public void Pick()
     {
-        inventory.AddToInventory(this, Vector3.one, transform.localRotation, mat);
+        if(inventory.CntTool == null)
+        {
+            inventory.AddToInventory(this, Vector3.one, transform.localRotation, mat);
+            OnTakenFood?.Invoke();
+        }
     }
 }

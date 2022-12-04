@@ -100,9 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd18ff676b385944a97e90cc853deaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 0}
   foodName: Salchica
+  foodSprite: {fileID: 21300000, guid: c8807451d021bd24ebd2442477e01482, type: 3}
   modelObject: {fileID: 3864221474093557270}
-  interactable: {fileID: 0}
 --- !u!65 &1782627443
 BoxCollider:
   m_ObjectHideFlags: 0

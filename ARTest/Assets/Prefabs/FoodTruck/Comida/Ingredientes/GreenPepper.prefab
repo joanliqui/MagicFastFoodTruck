@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb0bc95849666f4eb0f9d888d7b50c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 0}
   foodName: GreenPepper
   neededTool: Knife
   modelObject: {fileID: 6304411997493878450}
@@ -115,8 +116,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.13819784, y: 0.17782122, z: 0.14337516}
-  m_Center: {x: 0.003106743, y: 0.08196965, z: 0.00077724457}
+  m_Size: {x: 0.12876552, y: 0.17353362, z: 0.11593221}
+  m_Center: {x: -0.0016118058, y: 0.08411345, z: 0.0009074454}
 --- !u!1 &6304411997493878450
 GameObject:
   m_ObjectHideFlags: 0

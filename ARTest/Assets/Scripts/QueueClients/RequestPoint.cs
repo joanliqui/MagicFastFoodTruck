@@ -24,9 +24,18 @@ public class RequestPoint : MonoBehaviour
     [ContextMenu("RequestClient")]
     public void RequestClient()
     {
+        cntClient = null;
         cntClient = queue.GetFirstClient();
-        cntClient.MoveTo(this.transform.position, cntClient.OnRequestPoint);
-        cntClient.OnFoodCorrect += RequestClient;
+        cntClient.MoveTo(this.transform.position, OnRequestPoint);
         clientIn = true;
+        cntClient.OnFoodCorrect += RequestClient;
+        
+    }
+
+    private void OnRequestPoint()
+    {
+        cntClient.OnRequestPoint();
+        queue.AddClient();
+        Debug.Log("On Request Point:" + gameObject.name);
     }
 }

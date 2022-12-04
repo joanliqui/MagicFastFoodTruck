@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MagicBox : FoodTruckObject, IContainer
 {
@@ -26,25 +27,36 @@ public class MagicBox : FoodTruckObject, IContainer
     GazeInteractableFood gazeInteractable;
     [SerializeField] List<IngredientBox> acceptedIngredients;
     [SerializeField] Transform buildSocket;
+    [SerializeField] private Transform imagesLayout;
+    private List<IngredientUI> images = new List<IngredientUI>();
+
     [ColorUsage(false, true)]
     [SerializeField] Color errorColor;
-    [ColorUsage(true, true)]
-    private Color matNormalColor;
+    [ColorUsage(false, true)]
+    [SerializeField] Color correctColor;
+    [ColorUsage(false, true)]
+    [SerializeField] private Color matNormalColor;
 
+    private Animator anim;
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         gazeInteractable = GetComponent<GazeInteractableFood>();
-        mat = GetComponent<MeshRenderer>().material;
-
-        if (mat.HasProperty("_ShineColor"))
-        {
-            matNormalColor = mat.GetColor("_ShineColor");
-        }
+        mat.SetColor("_EmissionColor", matNormalColor);
+        anim = GetComponent<Animator>();
 
         //Suscripcion a los eventos
         gazeInteractable.OnGazeActivated.AddListener(PutIn);
         gazeInteractable.OnGazeEnter.AddListener(ActivateGlow);
+        foreach (Transform item in imagesLayout)
+        {
+            images.Add(item.GetComponent<IngredientUI>());
+        }
+
+        foreach (IngredientUI item in images)
+        {
+            item.ToggleEnableImage(false);
+        }
     }
 
     public void PutIn(BaseFood food)
@@ -52,12 +64,27 @@ public class MagicBox : FoodTruckObject, IContainer
         if (CheckIfInRecipe(food))
         {
             Debug.Log("IsIn");
+            CheckUITick(food);
             inventory.CleanInventory();
         }
 
         CheckCompletedRecipe();
     }
 
+    private void CheckUITick(BaseFood food)
+    {
+        for (int i = 0; i < images.Count; i++)
+        {
+            if (images[i].Fill)
+            {
+                if (images[i].Food.Equals(food))
+                {
+                    images[i].ToogleFoodTick(true);
+                }
+            }
+            else return;
+        }
+    }
     private void CheckCompletedRecipe()
     {
         int t = 0;
@@ -72,17 +99,23 @@ public class MagicBox : FoodTruckObject, IContainer
 
         if(t >= acceptedIngredients.Count)
         {
-            SpawnFoodBuild();
+            ProcesOfSpawnFoodBuild();
         }
     }
 
-    public void SpawnFoodBuild()
+    public void ProcesOfSpawnFoodBuild()
     {
         if (currentRecipe.plate.playePrefab)
         {
-            Instantiate(currentRecipe.plate.playePrefab, buildSocket.position, Quaternion.identity);
+            anim.SetTrigger("BuildFood");
         }
     }
+
+    public void InstantiateViaAnimation()
+    {
+        Instantiate(currentRecipe.plate.playePrefab, buildSocket.position, Quaternion.identity);
+    }
+
 
     private bool CheckIfInRecipe(BaseFood ingrediente)
     {
@@ -116,13 +149,29 @@ public class MagicBox : FoodTruckObject, IContainer
     {
         currentRecipe = recipe;
         acceptedIngredients = new List<IngredientBox>();
-        foreach (BaseFood item in recipe.ingredients)
+
+        for (int i = 0; i < images.Count; i++)//Resetear las imagenes
         {
-            IngredientBox ing = new IngredientBox(item);
+            images[i].ClearImage();
+        }
+
+        for (int i = 0; i < recipe.ingredients.Count; i++)
+        {
+            IngredientBox ing = new IngredientBox(recipe.ingredients[i]);
             acceptedIngredients.Add(ing);
+            images[i].AddImage(ing.ingredient);
+            images[i].ToggleEnableImage(true);
+        }
+
+        for (int i = 0; i < images.Count; i++)
+        {
+            if (!images[i].Fill)
+            {
+                images[i].ClearImage();
+                images[i].ToggleEnableImage(false);
+            }
         }
     }
-
 
     public void ActivateGlow(BaseFood food)
     {
@@ -136,17 +185,51 @@ public class MagicBox : FoodTruckObject, IContainer
                     {
                         if (!item.isIn)
                         {
-                            mat.SetColor("_ShineColor", matNormalColor);
+                            mat.SetColor("_EmissionColor", correctColor);
                             mat.SetInt(_canShinePropertie, 1);
                             return;
                         }
                     }
                 }
+                mat.SetColor("_EmissionColor", errorColor);
+                mat.SetInt(_canShinePropertie, 1);
             }
-            mat.SetColor("_ShineColor", errorColor);
-            mat.SetInt(_canShinePropertie, 1);
         }
     }
+
+    public override void ToogleGlow(bool glow)
+    {
+        if (mat != null)
+        {
+            if (!glow)
+            {
+                mat.SetColor("_EmissionColor", matNormalColor);
+            }
+        }
+    }
+    //public void ActivateGlow(BaseFood food)
+    //{
+    //    if(mat != null)
+    //    {
+    //        if(food != null)
+    //        {
+    //            foreach (IngredientBox item in acceptedIngredients)
+    //            {
+    //                if (item.ingredient.Equals(food))
+    //                {
+    //                    if (!item.isIn)
+    //                    {
+    //                        mat.SetColor("_ShineColor", matNormalColor);
+    //                        mat.SetInt(_canShinePropertie, 1);
+    //                        return;
+    //                    }
+    //                }
+    //            }
+    //        }
+    //        mat.SetColor("_ShineColor", errorColor);
+    //        mat.SetInt(_canShinePropertie, 1);
+    //    }
+    //}
 
 }
 

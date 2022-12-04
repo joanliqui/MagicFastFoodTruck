@@ -17,8 +17,8 @@ public class Tool : FoodTruckObject, IPickeable
         interactable = GetComponent<GazeInteractable>();
         givingScale = new Vector3(scaleModel, scaleModel, scaleModel);
         mat = GetComponentInChildren<MeshRenderer>().material;
-
-        interactable.OnGazeActivated.AddListener(Pick);
+        if(interactable != null)
+            interactable.OnGazeActivated.AddListener(Pick);
     }
 
     public void Drop()
@@ -51,7 +51,7 @@ public class Tool : FoodTruckObject, IPickeable
 
     public void Pick()
     {
-        if(rotator!= null)
+        if(rotator != null)
         {
             inventory.AddToInventory(this, givingScale, rotator.localRotation, mat);
         }

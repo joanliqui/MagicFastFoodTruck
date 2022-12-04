@@ -48,7 +48,6 @@ public class GazeInteractableFood : BaseGazeInteractable
     public override void Activate()
     {
         IsActivated = true;
-
         // Activated?.Invoke(this); //delegate
         food = inventory.GetCurrentObjectAsFood();
         if(food != null)
