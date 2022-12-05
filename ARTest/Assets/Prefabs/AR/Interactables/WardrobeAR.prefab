@@ -359,7 +359,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5129803490032128421}
         m_TargetAssemblyTypeName: Ingrediente, Assembly-CSharp
-        m_MethodName: Pick
+        m_MethodName: InteractWithIngredient
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -435,7 +435,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6283435048331792501}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000009983777}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -0.461, y: 0.607, z: 1.403}
   m_LocalScale: {x: 1, y: 1.6613488, z: 1}
   m_ConstrainProportionsScale: 0

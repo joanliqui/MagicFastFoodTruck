@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ModeSelectionManager : MonoBehaviour
 {
-    public void PlayeVR()
+    public void PlayVR()
     {
-        SceneManager.LoadScene("VR");
+        SceneManager.LoadScene("VRMenuScene");
     }
 
     public void PlayAR()

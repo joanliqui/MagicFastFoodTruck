@@ -41,13 +41,16 @@ public class MagicBox : FoodTruckObject, IContainer
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-        gazeInteractable = GetComponent<GazeInteractableFood>();
         mat.SetColor("_EmissionColor", matNormalColor);
         anim = GetComponent<Animator>();
+        gazeInteractable = GetComponent<GazeInteractableFood>();
 
         //Suscripcion a los eventos
-        gazeInteractable.OnGazeActivated.AddListener(PutIn);
-        gazeInteractable.OnGazeEnter.AddListener(ActivateGlow);
+        if(gazeInteractable != null)
+        {
+            gazeInteractable.OnGazeActivated.AddListener(PutIn);
+            gazeInteractable.OnGazeEnter.AddListener(ActivateGlow);
+        }
         foreach (Transform item in imagesLayout)
         {
             images.Add(item.GetComponent<IngredientUI>());
