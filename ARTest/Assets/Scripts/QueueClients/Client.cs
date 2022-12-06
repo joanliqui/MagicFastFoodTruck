@@ -47,16 +47,6 @@ public class Client : MonoBehaviour
 
     public ClientState ClientState1 { get => clientState; set => clientState = value; }
 
-    private void OnEnable()
-    {
-        //OnPosArrived += OnRequestPoint;
-    }
-
-    private void OnDisable()
-    {
-        //OnPosArrived -= OnRequestPoint;
-    }
-
     private void Start()
     {
         //Referencias

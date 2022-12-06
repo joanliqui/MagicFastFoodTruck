@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6941729579919016178}
+  - component: {fileID: 26583759862880875}
   m_Layer: 0
   m_Name: Cosas
   m_TagString: Untagged
@@ -39,6 +40,20 @@ Transform:
   m_Father: {fileID: 9102320767096933178}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &26583759862880875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109826485139271000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce973bd663718e42b9e71621766c240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allRecipes: {fileID: 11400000, guid: 716ff5065f53eac4599742ad6ee22a0d, type: 2}
+  mb: {fileID: 3816299365019052207}
 --- !u!1 &4340124222307336887
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +359,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1613737441514819746, guid: d4b5b25a6c7ca3d49a23901c19a8e9f1, type: 3}
+      propertyPath: onFoodBuild.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613737441514819746, guid: d4b5b25a6c7ca3d49a23901c19a8e9f1, type: 3}
+      propertyPath: onFoodBuild.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613737441514819746, guid: d4b5b25a6c7ca3d49a23901c19a8e9f1, type: 3}
+      propertyPath: onFoodBuild.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 26583759862880875}
+    - target: {fileID: 1613737441514819746, guid: d4b5b25a6c7ca3d49a23901c19a8e9f1, type: 3}
+      propertyPath: onFoodBuild.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613737441514819746, guid: d4b5b25a6c7ca3d49a23901c19a8e9f1, type: 3}
+      propertyPath: onFoodBuild.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OrderPlate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613737441514819746, guid: d4b5b25a6c7ca3d49a23901c19a8e9f1, type: 3}
+      propertyPath: onFoodBuild.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ARClient, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613737441514819746, guid: d4b5b25a6c7ca3d49a23901c19a8e9f1, type: 3}
+      propertyPath: onFoodBuild.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1613737441514819772, guid: d4b5b25a6c7ca3d49a23901c19a8e9f1, type: 3}
       propertyPath: m_Name
       value: MagicBoxAR
@@ -523,6 +566,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1613737441514819744, guid: d4b5b25a6c7ca3d49a23901c19a8e9f1, type: 3}
   m_PrefabInstance: {fileID: 2491367637980772365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3816299365019052207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1613737441514819746, guid: d4b5b25a6c7ca3d49a23901c19a8e9f1, type: 3}
+  m_PrefabInstance: {fileID: 2491367637980772365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe9e698ab221ad4e8d924b63642ad81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2747853134427718149
 PrefabInstance:
   m_ObjectHideFlags: 0

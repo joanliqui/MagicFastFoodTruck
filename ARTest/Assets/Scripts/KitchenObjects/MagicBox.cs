@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class MagicBox : FoodTruckObject, IContainer
@@ -37,6 +38,8 @@ public class MagicBox : FoodTruckObject, IContainer
     [ColorUsage(false, true)]
     [SerializeField] private Color matNormalColor;
 
+    [SerializeField] UnityEvent onFoodBuild;
+
     private Animator anim;
     private void Start()
     {
@@ -60,6 +63,7 @@ public class MagicBox : FoodTruckObject, IContainer
         {
             item.ToggleEnableImage(false);
         }
+
     }
 
     public void PutIn(BaseFood food)
@@ -117,6 +121,7 @@ public class MagicBox : FoodTruckObject, IContainer
     public void InstantiateViaAnimation()
     {
         Instantiate(currentRecipe.plate.playePrefab, buildSocket.position, Quaternion.identity);
+        onFoodBuild?.Invoke();
     }
 
 
