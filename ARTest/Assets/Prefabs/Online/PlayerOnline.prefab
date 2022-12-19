@@ -316,9 +316,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5725954427626212541}
   - component: {fileID: 5725954427626212530}
-  - component: {fileID: 5725954427626212543}
+  - component: {fileID: 5119624464602262589}
   - component: {fileID: 5725954427626212542}
-  - component: {fileID: 3066322038970395682}
   - component: {fileID: 8942448580105324240}
   - component: {fileID: 279945210537817186}
   m_Layer: 0
@@ -361,7 +360,7 @@ MonoBehaviour:
   m_TrackingOriginMode: 1
   m_TrackingSpace: 0
   m_CameraYOffset: 0.96
---- !u!114 &5725954427626212543
+--- !u!114 &5119624464602262589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,9 +369,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5725954427626212531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 754ad1fe5dd3cec41becefc1741dd193, type: 3}
+  m_Script: {fileID: 11500000, guid: fa2a6d7140f803143ac3eee5eeebc60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0.1
   mouseSensitivity: 20
   camBody: {fileID: 5725954427625368709}
 --- !u!114 &5725954427626212542
@@ -389,20 +391,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   socketObj: {fileID: 5725954427884832868}
   holoMat: {fileID: 2100000, guid: a00e07cfac4ec4e4896cd9305e0844f5, type: 2}
---- !u!114 &3066322038970395682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5725954427626212531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 754ad1fe5dd3cec41becefc1741dd193, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSensitivity: 100
-  camBody: {fileID: 5725954426611967921}
 --- !u!114 &8942448580105324240
 MonoBehaviour:
   m_ObjectHideFlags: 0
