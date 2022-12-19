@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Van
   - Client
+  - NetworkManager
   layers:
   - Default
   - TransparentFX
