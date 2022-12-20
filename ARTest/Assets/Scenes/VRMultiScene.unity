@@ -1460,8 +1460,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1390204354}
-  - component: {fileID: 1390204353}
   - component: {fileID: 1390204355}
+  - component: {fileID: 1390204356}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: NetworkManager
@@ -1469,34 +1469,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1390204353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390204352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aab4c8111b7c411b9b92cf3dbc5bd4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0
-  runInBackground: 1
-  autoStartServerBuild: 1
-  autoConnectClientBuild: 0
-  sendRate: 30
-  offlineScene: 
-  onlineScene: 
-  transport: {fileID: 1390204355}
-  networkAddress: localhost
-  maxConnections: 2
-  authenticator: {fileID: 0}
-  playerPrefab: {fileID: 5725954427626212531, guid: 9df3bb9486053ce4eb203f51a8154cab, type: 3}
-  autoCreatePlayer: 1
-  playerSpawnMethod: 1
-  spawnPrefabs: []
-  timeInterpolationGui: 0
 --- !u!4 &1390204354
 Transform:
   m_ObjectHideFlags: 0
@@ -1542,6 +1514,42 @@ MonoBehaviour:
   debugLog: 0
   statisticsGUI: 0
   statisticsLog: 0
+--- !u!114 &1390204356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390204352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202657f913196ff468679b6150b766f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 1
+  runInBackground: 1
+  autoStartServerBuild: 1
+  autoConnectClientBuild: 0
+  sendRate: 30
+  offlineScene: 
+  onlineScene: 
+  transport: {fileID: 1390204355}
+  networkAddress: localhost
+  maxConnections: 2
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 5725954427626212531, guid: 9df3bb9486053ce4eb203f51a8154cab, type: 3}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 1
+  spawnPrefabs:
+  - {fileID: 8795549431735643327, guid: e3e8094e82ef8ed419404693a1bd19b5, type: 3}
+  timeInterpolationGui: 0
+  wardrobePrefabTransform: {fileID: 1723424576}
+  prueba: 0
+--- !u!4 &1723424576 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5482115964157592084, guid: e1fcc4b095a8e2145a55b8971515459d, type: 3}
+  m_PrefabInstance: {fileID: 2956370950722644275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1956816210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1930,6 +1938,10 @@ PrefabInstance:
     - target: {fileID: 4716062408963474112, guid: e1fcc4b095a8e2145a55b8971515459d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5143026937226909870, guid: e1fcc4b095a8e2145a55b8971515459d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5200105607801529473, guid: e1fcc4b095a8e2145a55b8971515459d, type: 3}
       propertyPath: m_AnchorMax.y
