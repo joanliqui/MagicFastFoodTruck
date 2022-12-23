@@ -5,19 +5,45 @@ using UnityEngine;
 
 public class MyNetworkManager : NetworkManager
 {
-    [SerializeField] Transform wardrobePrefabTransform;
-    GameObject wardrobeObject;
+    private static int playersInGame = 0; 
     public bool prueba;
+
+    [SerializeField]  List<NETVanHandler> vans;
+    private static List<GazeInteractor> playerInteractors = new List<GazeInteractor>();
+
+
+
+    //Ocurre cuando se instancia el player
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
         base.OnServerAddPlayer(conn);
-        if (prueba)
+        if (conn.isReady)
         {
-            GameObject o = spawnPrefabs[0];
-            wardrobeObject = Instantiate(o, wardrobePrefabTransform.position, wardrobePrefabTransform.rotation);
-            wardrobeObject.transform.localScale = wardrobePrefabTransform.localScale;
-            wardrobePrefabTransform.gameObject.SetActive(false);
-            NetworkServer.Spawn(wardrobeObject);
+            if (vans[playersInGame].playerOwner == string.Empty)
+            {
+                vans[playersInGame].SetupVan("Player" + conn.connectionId, conn);
+            }
         }
+        else
+        {
+            Debug.LogWarning("The connexion is not ready yet");
+        }
+        playersInGame++;
+
+
+        //RpcDisconectGazeInteractorOnJoin(conn);
+
+        if (playersInGame == 2)
+        {
+            Debug.Log("START GAME");
+        }
+
+    }
+
+    void RpcDisconectGazeInteractorOnJoin(NetworkConnectionToClient conn)
+    {
+        GazeInteractor inter = conn.identity.transform.GetComponentInChildren<GazeInteractor>();
+        playerInteractors.Add(inter);
+        inter.enabled = false;
     }
 }

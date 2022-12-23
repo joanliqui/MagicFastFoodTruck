@@ -92,9 +92,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6116422683419815731}
-  - component: {fileID: 6116422683419815730}
-  - component: {fileID: 2008623796525376940}
   - component: {fileID: 1426350319404580716}
+  - component: {fileID: 7949987947693396792}
+  - component: {fileID: 4993362039520105093}
+  - component: {fileID: 7026058798199857032}
   m_Layer: 0
   m_Name: NETGreenPepper
   m_TagString: Untagged
@@ -118,7 +119,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6116422683419815730
+--- !u!65 &1426350319404580716
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6116422683419815732}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12876552, y: 0.17353362, z: 0.11593221}
+  m_Center: {x: -0.0016118058, y: 0.08411345, z: 0.0009074454}
+--- !u!114 &7949987947693396792
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,16 +141,57 @@ MonoBehaviour:
   m_GameObject: {fileID: 6116422683419815732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dcbf031fb98ef4683e60ce259cfd1c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneId: 0
+  _assetId: 3728070498
+  serverOnly: 0
+  visible: 0
+  hasSpawned: 0
+--- !u!114 &4993362039520105093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6116422683419815732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e7a2d22f03aaf4c86aa7e2f7438e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0.1
+  mat: {fileID: 0}
+  foodName: GreenPepper
+  foodSprite: {fileID: 0}
+  neededTool: Knife
+  modelObject: {fileID: 5520803997357991520}
+  cutedObject: {fileID: 1183214569491436598, guid: 6cdf60326b9a0af4895df250caa8baec, type: 3}
+--- !u!114 &7026058798199857032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6116422683419815732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b838d180737d3b249b1a1cf292ac803e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0.1
   _isActivable: 1
   _exitDelay: 0
   OnGazeEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2008623796525376940}
-        m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
+      - m_Target: {fileID: 4993362039520105093}
+        m_TargetAssemblyTypeName: NetFoodTruckObject, Assembly-CSharp
         m_MethodName: ToogleGlow
         m_Mode: 6
         m_Arguments:
@@ -153,8 +208,8 @@ MonoBehaviour:
   OnGazeExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2008623796525376940}
-        m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
+      - m_Target: {fileID: 4993362039520105093}
+        m_TargetAssemblyTypeName: NetFoodTruckObject, Assembly-CSharp
         m_MethodName: ToogleGlow
         m_Mode: 6
         m_Arguments:
@@ -171,34 +226,3 @@ MonoBehaviour:
   OnGazeToggle:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2008623796525376940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6116422683419815732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbb0bc95849666f4eb0f9d888d7b50c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mat: {fileID: 0}
-  foodName: GreenPepper
-  foodSprite: {fileID: 0}
-  neededTool: Knife
-  modelObject: {fileID: 5520803997357991520}
-  cutedObject: {fileID: 1183214569491436598, guid: c8ab0be9d867e244aaa3ea332a20b6ec, type: 3}
---- !u!65 &1426350319404580716
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6116422683419815732}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.12876552, y: 0.17353362, z: 0.11593221}
-  m_Center: {x: -0.0016118058, y: 0.08411345, z: 0.0009074454}

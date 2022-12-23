@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5832528131389573940
+--- !u!1 &2747895573824497212
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,71 +8,71 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5832528131389573936}
-  - component: {fileID: 5832528131389573939}
-  - component: {fileID: 2069677379742655635}
-  - component: {fileID: 8193090725321269543}
-  - component: {fileID: 5741148562728128957}
+  - component: {fileID: 3427304485431087267}
+  - component: {fileID: 4297017249503615268}
+  - component: {fileID: 543985003158585766}
+  - component: {fileID: 1126077960395117648}
+  - component: {fileID: 474876026423166666}
   m_Layer: 0
-  m_Name: NETMustard
+  m_Name: NetQuesoRallado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5832528131389573936
+--- !u!4 &3427304485431087267
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832528131389573940}
-  m_LocalRotation: {x: -0.7068355, y: 0.019586382, z: 0.019586382, w: -0.7068355}
-  m_LocalPosition: {x: -0.4144, y: -0.0211, z: -0.234}
+  m_GameObject: {fileID: 2747895573824497212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6530139, y: 0.599138, z: 1.7608925}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6332791778529322458}
+  - {fileID: 1761099824033484989}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5832528131389573939
+--- !u!65 &4297017249503615268
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832528131389573940}
+  m_GameObject: {fileID: 2747895573824497212}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.07513439, y: 0.15382662, z: 0.08659842}
-  m_Center: {x: -0.0008555576, y: 0.073086694, z: 0.0052473024}
---- !u!114 &2069677379742655635
+  m_Size: {x: 0.07279895, y: 0.012105405, z: 0.0685572}
+  m_Center: {x: -0.0074640587, y: 0.0039048493, z: 0.0010106266}
+--- !u!114 &543985003158585766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832528131389573940}
+  m_GameObject: {fileID: 2747895573824497212}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 0
-  _assetId: 1833179302
+  _assetId: 112617083
   serverOnly: 0
   visible: 0
   hasSpawned: 0
---- !u!114 &8193090725321269543
+--- !u!114 &1126077960395117648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832528131389573940}
+  m_GameObject: {fileID: 2747895573824497212}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45c09064f130e104e955b53fa303d234, type: 3}
@@ -82,16 +82,16 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   mat: {fileID: 0}
-  foodName: Mustard
-  foodSprite: {fileID: 21300000, guid: a83d194adba0a884ca627b793ef0654d, type: 3}
-  modelObject: {fileID: 6676947351286939488}
---- !u!114 &5741148562728128957
+  foodName: QuesoRallado
+  foodSprite: {fileID: 21300000, guid: 5f8b10c8fa6de2642a5c96720fda71a9, type: 3}
+  modelObject: {fileID: 4289861678302626282}
+--- !u!114 &474876026423166666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832528131389573940}
+  m_GameObject: {fileID: 2747895573824497212}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b838d180737d3b249b1a1cf292ac803e, type: 3}
@@ -105,7 +105,7 @@ MonoBehaviour:
   OnGazeEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8193090725321269543}
+      - m_Target: {fileID: 1126077960395117648}
         m_TargetAssemblyTypeName: NetFoodTruckObject, Assembly-CSharp
         m_MethodName: ToogleGlow
         m_Mode: 6
@@ -123,7 +123,7 @@ MonoBehaviour:
   OnGazeExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8193090725321269543}
+      - m_Target: {fileID: 1126077960395117648}
         m_TargetAssemblyTypeName: NetFoodTruckObject, Assembly-CSharp
         m_MethodName: ToogleGlow
         m_Mode: 6
@@ -141,7 +141,7 @@ MonoBehaviour:
   OnGazeToggle:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &6676947351286939488
+--- !u!1 &4289861678302626282
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,46 +149,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6332791778529322458}
-  - component: {fileID: 6939276288222702207}
-  - component: {fileID: 5163856691768254133}
+  - component: {fileID: 1761099824033484989}
+  - component: {fileID: 8615605250070326844}
+  - component: {fileID: 2170909448680499612}
   m_Layer: 0
-  m_Name: MustardModel
+  m_Name: Cheese_Cheese
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6332791778529322458
+--- !u!4 &1761099824033484989
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676947351286939488}
+  m_GameObject: {fileID: 4289861678302626282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.046118636, y: 0.046118636, z: 0.046118636}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.0049, z: 0}
+  m_LocalScale: {x: 23.494238, y: 16.886978, z: 23.494238}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 5832528131389573936}
+  m_Father: {fileID: 3427304485431087267}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6939276288222702207
+--- !u!33 &8615605250070326844
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676947351286939488}
-  m_Mesh: {fileID: -466431540336701250, guid: 9562c619918d86348b701bd1bdcbd31e, type: 3}
---- !u!23 &5163856691768254133
+  m_GameObject: {fileID: 4289861678302626282}
+  m_Mesh: {fileID: 1154402818342926086, guid: 300e4384aa660b244bb22cf13eb2eed7, type: 3}
+--- !u!23 &2170909448680499612
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676947351286939488}
+  m_GameObject: {fileID: 4289861678302626282}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -202,7 +202,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 514af54a6ed589b4896416a7ffb04706, type: 2}
+  - {fileID: 2100000, guid: 70e28418bae4c924eb3fca575f2ab864, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

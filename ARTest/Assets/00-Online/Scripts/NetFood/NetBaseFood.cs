@@ -2,25 +2,27 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 public abstract class NetBaseFood : NetFoodTruckObject
 {
     [SerializeField] protected string foodName;
-    protected Inventory inventory;
     protected bool isInTable = false;
     public Action OnTakenFood;
     public Sprite foodSprite;
+    
+    protected NetInventory inventory;
     public string FoodName { get => foodName; set => foodName = value; }
 
-
-    protected void Start()
+    private void Awake()
     {
-        SetInventory();
+        
     }
 
-    protected void SetInventory()
+
+    public void SetInventory(NetInventory inv)
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = inv;
     }
 
     public void ActivateComponents()

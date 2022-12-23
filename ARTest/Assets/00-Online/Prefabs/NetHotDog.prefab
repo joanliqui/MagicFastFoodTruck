@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5832528131389573940
+--- !u!1 &6938183347630143037
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,71 +8,71 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5832528131389573936}
-  - component: {fileID: 5832528131389573939}
-  - component: {fileID: 2069677379742655635}
-  - component: {fileID: 8193090725321269543}
-  - component: {fileID: 5741148562728128957}
+  - component: {fileID: 5818463441364617773}
+  - component: {fileID: 965261252523969437}
+  - component: {fileID: 637242402628886680}
+  - component: {fileID: 7142560908970437008}
+  - component: {fileID: 298625076264799406}
   m_Layer: 0
-  m_Name: NETMustard
+  m_Name: NetHotDog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5832528131389573936
+--- !u!4 &5818463441364617773
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832528131389573940}
-  m_LocalRotation: {x: -0.7068355, y: 0.019586382, z: 0.019586382, w: -0.7068355}
-  m_LocalPosition: {x: -0.4144, y: -0.0211, z: -0.234}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 6938183347630143037}
+  m_LocalRotation: {x: -0.014878067, y: 0.70495754, z: -0.01912005, w: 0.7088356}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0015299, y: 1.6597999, z: 1.00002}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6332791778529322458}
+  - {fileID: 4123707849337765486}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5832528131389573939
+  m_LocalEulerAnglesHint: {x: 0.336, y: -90.322, z: -2.756}
+--- !u!65 &965261252523969437
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832528131389573940}
+  m_GameObject: {fileID: 6938183347630143037}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.07513439, y: 0.15382662, z: 0.08659842}
-  m_Center: {x: -0.0008555576, y: 0.073086694, z: 0.0052473024}
---- !u!114 &2069677379742655635
+  m_Size: {x: 0.05991968, y: 0.073968016, z: 0.17224655}
+  m_Center: {x: -0.025052464, y: 0.021671133, z: 0.0026553888}
+--- !u!114 &637242402628886680
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832528131389573940}
+  m_GameObject: {fileID: 6938183347630143037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 0
-  _assetId: 1833179302
+  _assetId: 270004426
   serverOnly: 0
   visible: 0
   hasSpawned: 0
---- !u!114 &8193090725321269543
+--- !u!114 &7142560908970437008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832528131389573940}
+  m_GameObject: {fileID: 6938183347630143037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45c09064f130e104e955b53fa303d234, type: 3}
@@ -82,16 +82,16 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   mat: {fileID: 0}
-  foodName: Mustard
-  foodSprite: {fileID: 21300000, guid: a83d194adba0a884ca627b793ef0654d, type: 3}
-  modelObject: {fileID: 6676947351286939488}
---- !u!114 &5741148562728128957
+  foodName: HotDog
+  foodSprite: {fileID: 21300000, guid: 43a1df8e610602a4c8ae66744ff54e41, type: 3}
+  modelObject: {fileID: 8224174346557950466}
+--- !u!114 &298625076264799406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832528131389573940}
+  m_GameObject: {fileID: 6938183347630143037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b838d180737d3b249b1a1cf292ac803e, type: 3}
@@ -105,7 +105,7 @@ MonoBehaviour:
   OnGazeEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8193090725321269543}
+      - m_Target: {fileID: 7142560908970437008}
         m_TargetAssemblyTypeName: NetFoodTruckObject, Assembly-CSharp
         m_MethodName: ToogleGlow
         m_Mode: 6
@@ -123,7 +123,7 @@ MonoBehaviour:
   OnGazeExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8193090725321269543}
+      - m_Target: {fileID: 7142560908970437008}
         m_TargetAssemblyTypeName: NetFoodTruckObject, Assembly-CSharp
         m_MethodName: ToogleGlow
         m_Mode: 6
@@ -141,7 +141,7 @@ MonoBehaviour:
   OnGazeToggle:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &6676947351286939488
+--- !u!1 &8224174346557950466
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,46 +149,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6332791778529322458}
-  - component: {fileID: 6939276288222702207}
-  - component: {fileID: 5163856691768254133}
+  - component: {fileID: 4123707849337765486}
+  - component: {fileID: 3319857620841932976}
+  - component: {fileID: 6352905066532552474}
   m_Layer: 0
-  m_Name: MustardModel
+  m_Name: HotDogModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6332791778529322458
+--- !u!4 &4123707849337765486
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676947351286939488}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.046118636, y: 0.046118636, z: 0.046118636}
+  m_GameObject: {fileID: 8224174346557950466}
+  m_LocalRotation: {x: 0.00000006807379, y: -0.99995935, z: -0.00901943, w: 0.00000022438049}
+  m_LocalPosition: {x: -0.0048, y: 0.0179, z: 0}
+  m_LocalScale: {x: 0.020943122, y: 0.020943124, z: 0.049447205}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5832528131389573936}
+  m_Father: {fileID: 5818463441364617773}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6939276288222702207
+  m_LocalEulerAnglesHint: {x: -1.034, y: -180, z: 0}
+--- !u!33 &3319857620841932976
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676947351286939488}
-  m_Mesh: {fileID: -466431540336701250, guid: 9562c619918d86348b701bd1bdcbd31e, type: 3}
---- !u!23 &5163856691768254133
+  m_GameObject: {fileID: 8224174346557950466}
+  m_Mesh: {fileID: 3911863160471375708, guid: c1fcf41453bdfc64fba05c6d6bc8d6d1, type: 3}
+--- !u!23 &6352905066532552474
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676947351286939488}
+  m_GameObject: {fileID: 8224174346557950466}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -202,7 +202,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 514af54a6ed589b4896416a7ffb04706, type: 2}
+  - {fileID: 2100000, guid: 7f9b85c5a5ce61442a6911d6347c3e01, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

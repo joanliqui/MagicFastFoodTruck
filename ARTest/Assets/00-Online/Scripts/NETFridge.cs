@@ -9,7 +9,7 @@ public class NETFridge : NetFoodTruckObject, IInteractuable
     bool isOpen = false;
     Collider col;
     [SerializeField] GameObject[] doors;
-    [SerializeField] List<BaseFood> foodInside;
+    [SerializeField] List<NetBaseFood> foodInside;
 
     //private NetworkAnimator networkAnimator;
 
@@ -23,21 +23,17 @@ public class NETFridge : NetFoodTruckObject, IInteractuable
             item.SetActive(true);
         }
     }
+
     [ServerCallback]
     public void Interact()
     {
-        //if (isOwned)
-        //{
-          //  Debug.Log("Owned");
             if (!isOpen)
             {
-            //networkAnimator.SetTrigger("Open");
-            //anim.SetTrigger("Open");
-            anim.SetInteger("openState", 1); //Abre
-            isOpen = true;
+                anim.SetInteger("openState", 1); //Abre
+                isOpen = true;
                 StartCoroutine(CloseFridge());
             }
-        //}
+ 
     }
 
     public void ClosingFridge()

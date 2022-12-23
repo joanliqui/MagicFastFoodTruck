@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5725954426546512588}
-  - component: {fileID: 5725954426546512591}
+  - component: {fileID: 7885285958589878026}
   m_Layer: 0
   m_Name: GazeInteractor
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 5725954426611967921}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5725954426546512591
+--- !u!114 &7885285958589878026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5725954426546512589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70f8f050a25f1314cbfbb4714dd1cf22, type: 3}
+  m_Script: {fileID: 11500000, guid: 32cd58ddd7274e34499ca35dc45d67a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxDetectionDistance: 10
@@ -50,7 +50,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
-  _reticlePrefab: {fileID: 6978465848317897532, guid: 3824fa98cc16a1b48b79400594cc83cd, type: 3}
+  _reticlePrefab: {fileID: 6978465848317897532, guid: 51f6559924e2fb34a93d5a0dc727792a, type: 3}
 --- !u!1 &5725954426611967924
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,9 +317,9 @@ GameObject:
   - component: {fileID: 5725954427626212541}
   - component: {fileID: 5725954427626212530}
   - component: {fileID: 5119624464602262589}
-  - component: {fileID: 5725954427626212542}
   - component: {fileID: 8942448580105324240}
   - component: {fileID: 279945210537817186}
+  - component: {fileID: -7627722765283243299}
   m_Layer: 0
   m_Name: PlayerOnline
   m_TagString: Player
@@ -377,20 +377,6 @@ MonoBehaviour:
   syncInterval: 0.1
   mouseSensitivity: 20
   camBody: {fileID: 5725954427625368709}
---- !u!114 &5725954427626212542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5725954427626212531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb5b277d7e6552f49abf191cf37b2128, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  socketObj: {fileID: 5725954427884832868}
-  holoMat: {fileID: 2100000, guid: a00e07cfac4ec4e4896cd9305e0844f5, type: 2}
 --- !u!114 &8942448580105324240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +422,20 @@ MonoBehaviour:
   showGizmos: 0
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+--- !u!114 &-7627722765283243299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5725954427626212531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577cb348c6e73664ca2a30c40ad39ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketObj: {fileID: 5725954427884832868}
+  holoMat: {fileID: 2100000, guid: a00e07cfac4ec4e4896cd9305e0844f5, type: 2}
 --- !u!1 &5725954427884832869
 GameObject:
   m_ObjectHideFlags: 0

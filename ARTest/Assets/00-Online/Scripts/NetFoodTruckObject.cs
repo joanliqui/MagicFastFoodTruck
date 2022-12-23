@@ -8,7 +8,6 @@ public abstract class NetFoodTruckObject : NetworkBehaviour
 {
     [SerializeField] protected Material mat;
     protected const string _canShinePropertie = "_canShine";
-
     public virtual void ToogleGlow(bool glow)
     {
         int i = Convert.ToInt32(glow);
