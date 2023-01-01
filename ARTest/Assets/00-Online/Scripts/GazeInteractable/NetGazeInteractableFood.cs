@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class NetGazeInteractableFood : NetBaseGazeInteractable
+public class NetGazeInteractableFood : NetBaseGazeInteractable, INetInventory
 {
     private const string WAIT_TO_EXIT_COROUTINE = "WaitToExit_Coroutine";
 
@@ -39,11 +39,6 @@ public class NetGazeInteractableFood : NetBaseGazeInteractable
     void Start()
     {
         col = GetComponent<Collider>();
-    }
-
-    public void SetInvenory(NetInventory inv)
-    {
-        inventory = inv;
     }
 
     /// <summary>
@@ -99,5 +94,8 @@ public class NetGazeInteractableFood : NetBaseGazeInteractable
         IsActivated = false;
     }
 
-
+    public void SetInventory(NetInventory inv)
+    {
+        inventory = inv;
+    }
 }

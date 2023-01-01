@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class NetMagicBox : NetFoodTruckObject
+public class NetMagicBox : NetFoodTruckObject, INetInventory
 {
 
     [System.Serializable]
@@ -53,7 +53,7 @@ public class NetMagicBox : NetFoodTruckObject
         anim = GetComponent<Animator>();
         gazeInteractable = GetComponent<NetGazeInteractableFood>();
 
-        gazeInteractable.SetInvenory(inventory);
+        gazeInteractable.SetInventory(inventory);
 
         //Suscripcion a los eventos
         if(gazeInteractable != null)

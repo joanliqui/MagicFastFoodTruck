@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 708092202729133570}
   - component: {fileID: 4502611776670259623}
   - component: {fileID: 1844376639005994349}
-  - component: {fileID: 274360972134651691}
+  - component: {fileID: 3124888783396308938}
   m_Layer: 0
   m_Name: NETScreen
   m_TagString: Untagged
@@ -86,7 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &274360972134651691
+--- !u!114 &3124888783396308938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 187029916264729784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75c89cc3c6afdc44486ce7027adb6112, type: 3}
+  m_Script: {fileID: 11500000, guid: eaf3d71fc2b34084dac73235b38cad6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   numberTetx: {fileID: 281899254876551920}

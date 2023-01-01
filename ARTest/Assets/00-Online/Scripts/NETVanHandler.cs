@@ -12,7 +12,9 @@ public class NETVanHandler : NetworkBehaviour
     private PlayerInfo player;
 
     [SerializeField] List<NetBaseFood> allFoodList = new List<NetBaseFood>();
-    [SerializeField] NetMagicBox magicBox;
+    [SerializeField] List<GameObject> importantObjects;
+    [SerializeField] NetMagicBox box;
+    private List<INetInventory> objectsWithInventory = new List<INetInventory>();
 
     private void Awake()    
     {
@@ -40,14 +42,23 @@ public class NETVanHandler : NetworkBehaviour
         {
             allFoodList[i].SetInventory(player.Inventory);
         }
-        if (magicBox)
+        foreach (GameObject item in importantObjects)
         {
-            magicBox.SetInventory(player.Inventory);
+            objectsWithInventory.Add(item.GetComponent<INetInventory>());
         }
+
+        foreach (INetInventory item in objectsWithInventory)
+        {
+            item.SetInventory(player.Inventory);
+        }
+        
     }
 
 
-
+    public void UpdateVanClientRequest(NetRecipeSO recipe)
+    {
+        box.UpdateIngredientBoxList(recipe);
+    }
 
 
 }

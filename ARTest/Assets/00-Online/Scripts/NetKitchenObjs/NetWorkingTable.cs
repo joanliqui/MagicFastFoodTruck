@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NetWorkingTable : NetFoodTruckObject, IContainer
+public class NetWorkingTable : NetFoodTruckObject, IContainer, INetInventory
 {
     public bool isVR = true;
     [System.Serializable]
@@ -15,11 +15,10 @@ public class NetWorkingTable : NetFoodTruckObject, IContainer
 
     GazeInteractableFood interactable;
     [SerializeField] List<TableSockets> sockets;
-    private Inventory inv;
+    private NetInventory inv;
 
     private void Start()
     {
-        inv = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         if (isVR)
         {
             interactable = GetComponent<GazeInteractableFood>();
@@ -29,6 +28,7 @@ public class NetWorkingTable : NetFoodTruckObject, IContainer
             }
         }
     }
+
     public void PutIn(BaseFood food)
     {
         if (food != null)
@@ -62,4 +62,8 @@ public class NetWorkingTable : NetFoodTruckObject, IContainer
         }
     }
 
+    public void SetInventory(NetInventory inv)
+    {
+        this.inv = inv;
+    }
 }

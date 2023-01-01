@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1176079048743814225}
   - component: {fileID: 1952755764071751401}
-  - component: {fileID: 1952755764071751400}
-  - component: {fileID: 1952755764071751406}
+  - component: {fileID: 7951586216727722374}
+  - component: {fileID: 7413415758113764276}
+  - component: {fileID: 8330272149847620258}
   m_Layer: 0
   m_Name: NETBin
   m_TagString: Untagged
@@ -48,7 +49,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.28254676, y: 0.44740844, z: 0.34055364}
   m_Center: {x: -0.0015265048, y: 0.20607698, z: -0.00305292}
---- !u!114 &1952755764071751400
+--- !u!114 &7951586216727722374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,15 +58,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 1952755764071751403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87d732cbedd14ba4d870ddf70e7f82bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneId: 0
+  _assetId: 309756426
+  serverOnly: 0
+  visible: 0
+  hasSpawned: 0
+--- !u!114 &7413415758113764276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952755764071751403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b11028b80ea384c91c725a05d7e922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat: {fileID: 0}
+--- !u!114 &8330272149847620258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952755764071751403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab51d5d02bb7a3e4b8f012054cd95ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0.1
   _isActivable: 1
   _exitDelay: 0
   OnGazeEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1952755764071751406}
+      - m_Target: {fileID: 7413415758113764276}
         m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
         m_MethodName: ToogleGlow
         m_Mode: 6
@@ -83,7 +117,7 @@ MonoBehaviour:
   OnGazeExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1952755764071751406}
+      - m_Target: {fileID: 7413415758113764276}
         m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
         m_MethodName: ToogleGlow
         m_Mode: 6
@@ -98,19 +132,6 @@ MonoBehaviour:
   OnGazeActivated:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1952755764071751406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952755764071751403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36a0785910107df49b4ef5453ce576c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mat: {fileID: 0}
 --- !u!1 &8937655501529082411
 GameObject:
   m_ObjectHideFlags: 0

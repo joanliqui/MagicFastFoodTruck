@@ -93,11 +93,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8004023092223781635}
-  - component: {fileID: 8004023092223781634}
-  - component: {fileID: 8004023092223781645}
   - component: {fileID: 8004023092223781644}
+  - component: {fileID: 6734136834655371972}
+  - component: {fileID: 5680615670614057130}
+  - component: {fileID: 725623227056939155}
   m_Layer: 0
-  m_Name: Grater2
+  m_Name: NetGrater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,7 +120,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8004023092223781634
+--- !u!65 &8004023092223781644
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8004023092223781647}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0746364, y: 0.11513662, z: 0.06549144}
+  m_Center: {x: -0.00032660365, y: -0.0042458773, z: -0.0009797812}
+--- !u!114 &6734136834655371972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,13 +142,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 8004023092223781647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd3c8ff8d9a0f8840b447d1119897831, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneId: 0
+  _assetId: 2105996999
+  serverOnly: 0
+  visible: 0
+  hasSpawned: 0
+--- !u!114 &5680615670614057130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8004023092223781647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e51a538372872034bbc29d908ad83cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat: {fileID: 0}
   toolName: Grater
   scaleModel: 2
   rotator: {fileID: 8004023092611908336}
---- !u!114 &8004023092223781645
+--- !u!114 &725623227056939155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,15 +175,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 8004023092223781647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dcbf031fb98ef4683e60ce259cfd1c, type: 3}
+  m_Script: {fileID: 11500000, guid: b838d180737d3b249b1a1cf292ac803e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0.1
   _isActivable: 1
   _exitDelay: 0
   OnGazeEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8004023092223781634}
+      - m_Target: {fileID: 5680615670614057130}
         m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
         m_MethodName: ToogleGlow
         m_Mode: 6
@@ -169,7 +204,7 @@ MonoBehaviour:
   OnGazeExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8004023092223781634}
+      - m_Target: {fileID: 5680615670614057130}
         m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
         m_MethodName: ToogleGlow
         m_Mode: 6
@@ -187,19 +222,6 @@ MonoBehaviour:
   OnGazeToggle:
     m_PersistentCalls:
       m_Calls: []
---- !u!65 &8004023092223781644
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8004023092223781647}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0746364, y: 0.11513662, z: 0.06549144}
-  m_Center: {x: -0.00032660365, y: -0.0042458773, z: -0.0009797812}
 --- !u!1 &8004023092611908339
 GameObject:
   m_ObjectHideFlags: 0

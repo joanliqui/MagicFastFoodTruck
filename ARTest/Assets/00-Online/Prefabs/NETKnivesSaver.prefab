@@ -424,9 +424,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8773918746274925073}
-  - component: {fileID: 8773918746274925070}
-  - component: {fileID: 8773918746274925071}
   - component: {fileID: 8773918746274925068}
+  - component: {fileID: 7409037396095575274}
+  - component: {fileID: 8807279059267559660}
+  - component: {fileID: 3995395981467892483}
   m_Layer: 0
   m_Name: NETKnivesSaver
   m_TagString: Untagged
@@ -451,7 +452,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 9.117, z: 0}
---- !u!114 &8773918746274925070
+--- !u!65 &8773918746274925068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8773918746274925072}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1468619, y: 0.26639435, z: 0.17464675}
+  m_Center: {x: 0.023430863, y: 0.13073815, z: -0.00830248}
+--- !u!114 &7409037396095575274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -460,13 +474,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 8773918746274925072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b17619fedb4fb047a59707a4915ce61, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  _assetId: 2846305436
+  serverOnly: 0
+  visible: 0
+  hasSpawned: 0
+--- !u!114 &8807279059267559660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8773918746274925072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119d95a7e9581854ea9b36fcdee2604e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mat: {fileID: 0}
   tool: {fileID: 7201746091370197760}
   mesh: {fileID: 3542286268977793308}
---- !u!114 &8773918746274925071
+--- !u!114 &3995395981467892483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -475,15 +506,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 8773918746274925072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dcbf031fb98ef4683e60ce259cfd1c, type: 3}
+  m_Script: {fileID: 11500000, guid: b838d180737d3b249b1a1cf292ac803e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0.1
   _isActivable: 1
   _exitDelay: 0
   OnGazeEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8773918746274925070}
+      - m_Target: {fileID: 8807279059267559660}
         m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
         m_MethodName: ToogleGlow
         m_Mode: 6
@@ -501,7 +535,7 @@ MonoBehaviour:
   OnGazeExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8773918746274925070}
+      - m_Target: {fileID: 8807279059267559660}
         m_TargetAssemblyTypeName: FoodTruckObject, Assembly-CSharp
         m_MethodName: ToogleGlow
         m_Mode: 6
@@ -519,19 +553,6 @@ MonoBehaviour:
   OnGazeToggle:
     m_PersistentCalls:
       m_Calls: []
---- !u!65 &8773918746274925068
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8773918746274925072}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1468619, y: 0.26639435, z: 0.17464675}
-  m_Center: {x: 0.023430863, y: 0.13073815, z: -0.00830248}
 --- !u!1 &8773918746818311756
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +691,7 @@ PrefabInstance:
     - target: {fileID: 2128567318964382783, guid: 4b82528c6dfa23a40b163f34e57cf842, type: 3}
       propertyPath: OnGazeActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8773918746274925070}
+      objectReference: {fileID: 0}
     - target: {fileID: 2128567318964382783, guid: 4b82528c6dfa23a40b163f34e57cf842, type: 3}
       propertyPath: OnGazeEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToogleGlow
