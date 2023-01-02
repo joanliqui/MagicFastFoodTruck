@@ -6,10 +6,12 @@ public class NetToolContainer : FoodTruckObject, INetInventory
 {
     NetGazeInteractable inter;
     bool toolIn;
-    [SerializeField] Tool tool;
+    [SerializeField] NetTool tool;
     NetInventory inv;
     Collider col;
     [SerializeField] MeshRenderer mesh;
+
+    public NetTool Tool { get => tool; set => tool = value; }
 
     private void Start()
     {
