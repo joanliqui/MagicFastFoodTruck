@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ModeSelectionScene.unity
     guid: a3c0e4507dfbdd440a5c3f048228ff43
   - enabled: 1
+    path: Assets/Scenes/LogoScene.unity
+    guid: 4c73c5722b472ff43b60dab476392283
+  - enabled: 1
     path: Assets/Scenes/VRMenuScene.unity
     guid: 2675285f5a0eafe41b94fd2046dc44bc
   - enabled: 1
