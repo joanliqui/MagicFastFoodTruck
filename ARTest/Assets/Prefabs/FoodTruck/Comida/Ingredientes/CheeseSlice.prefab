@@ -183,10 +183,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb0bc95849666f4eb0f9d888d7b50c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 0}
   foodName: CheeseSlice
+  foodSprite: {fileID: 0}
   neededTool: Grater
   modelObject: {fileID: 8549526232246746325}
   cutedObject: {fileID: 2747895573824497212, guid: 2cea9b862a8887c419e47915de5cce33, type: 3}
+  clip: {fileID: 8300000, guid: 5aef40a3e2e0b3e469c0c67573ba1562, type: 3}
 --- !u!65 &8820138372138279382
 BoxCollider:
   m_ObjectHideFlags: 0

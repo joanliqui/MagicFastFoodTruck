@@ -113,10 +113,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb0bc95849666f4eb0f9d888d7b50c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 0}
   foodName: Tomato
+  foodSprite: {fileID: 0}
   neededTool: Knife
   modelObject: {fileID: 8773779450906904375}
   cutedObject: {fileID: 335121816229024259, guid: 8453dec703081dc49abc0b435478caa2, type: 3}
+  clip: {fileID: 8300000, guid: 5aef40a3e2e0b3e469c0c67573ba1562, type: 3}
 --- !u!1 &8773779450906904375
 GameObject:
   m_ObjectHideFlags: 0

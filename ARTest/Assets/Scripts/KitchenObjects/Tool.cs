@@ -16,7 +16,7 @@ public class Tool : FoodTruckObject, IPickeable
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         interactable = GetComponent<GazeInteractable>();
         givingScale = new Vector3(scaleModel, scaleModel, scaleModel);
-        mat = GetComponentInChildren<MeshRenderer>().material;
+        mat = GetComponentInChildren<MeshRenderer>().sharedMaterial;
         if(interactable != null)
             interactable.OnGazeActivated.AddListener(Pick);
     }

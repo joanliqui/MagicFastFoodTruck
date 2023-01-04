@@ -40,13 +40,20 @@ public class MagicBox : FoodTruckObject, IContainer
 
     [SerializeField] UnityEvent onFoodBuild;
 
+    [SerializeField]
     private Animator anim;
+
+    AudioSource source;
+    [Space(15)]
+    [SerializeField] AudioClip confirmClip;
+    [SerializeField] AudioClip errorClip;
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         mat.SetColor("_EmissionColor", matNormalColor);
         anim = GetComponent<Animator>();
         gazeInteractable = GetComponent<GazeInteractableFood>();
+        source = GetComponent<AudioSource>();
 
         //Suscripcion a los eventos
         if(gazeInteractable != null)
@@ -74,7 +81,7 @@ public class MagicBox : FoodTruckObject, IContainer
             CheckUITick(food);
             inventory.CleanInventory();
         }
-
+        source.Play();
         CheckCompletedRecipe();
     }
 
@@ -133,13 +140,14 @@ public class MagicBox : FoodTruckObject, IContainer
             {
                 if (!item.isIn)
                 {
-                    
                     IngredientInside(item);
+                    source.clip = confirmClip;
                     return true;
                 }
                 else
                 {
                     Debug.LogWarning("Ya esta dentro");
+                    source.clip = errorClip;
                     return false;
                 }
             }

@@ -64,6 +64,7 @@ MonoBehaviour:
   foodName: Mustard
   foodSprite: {fileID: 21300000, guid: a83d194adba0a884ca627b793ef0654d, type: 3}
   modelObject: {fileID: 7546843581085994402}
+  clip: {fileID: 8300000, guid: 5aef40a3e2e0b3e469c0c67573ba1562, type: 3}
 --- !u!114 &7269868710122420720
 MonoBehaviour:
   m_ObjectHideFlags: 0

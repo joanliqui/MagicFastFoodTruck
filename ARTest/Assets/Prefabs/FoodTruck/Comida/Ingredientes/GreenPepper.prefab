@@ -84,7 +84,19 @@ MonoBehaviour:
         m_CallState: 2
   OnGazeActivated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnGazeToggle:
     m_PersistentCalls:
       m_Calls: []
@@ -102,9 +114,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 0}
   foodName: GreenPepper
+  foodSprite: {fileID: 0}
   neededTool: Knife
   modelObject: {fileID: 6304411997493878450}
   cutedObject: {fileID: 1183214569491436598, guid: c8ab0be9d867e244aaa3ea332a20b6ec, type: 3}
+  clip: {fileID: 8300000, guid: 5aef40a3e2e0b3e469c0c67573ba1562, type: 3}
 --- !u!65 &588699132699264958
 BoxCollider:
   m_ObjectHideFlags: 0

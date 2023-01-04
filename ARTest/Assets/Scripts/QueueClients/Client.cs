@@ -41,7 +41,9 @@ public class Client : MonoBehaviour
     //public delegate void RequestHandler();
     public event Action OnPosArrived;
     public event Action OnFoodCorrect;
-  
+
+
+    AudioSource source;
 
     Inventory inv;
 
@@ -55,6 +57,7 @@ public class Client : MonoBehaviour
         inv = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         anim = GetComponentInChildren<Animator>();
         col = GetComponent<Collider>();
+        source = GetComponent<AudioSource>();
 
         //Animator Hash
         walkingHash = Animator.StringToHash("isWalking");
@@ -163,6 +166,7 @@ public class Client : MonoBehaviour
         clientState = ClientState.OnPointToRequest;
         anim.SetTrigger(waveHash);
         col.enabled = true;
+        source.Play();
         ActivateRequestUI();
         van.UpdateVanClientRequest(wantedPlate);
     }

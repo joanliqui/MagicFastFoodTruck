@@ -52,7 +52,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _CANSHINE: 0
-    - _ColorStrenght: 3.23
+    - _ColorStrenght: 57.6
     - _FresnelPower: 2.5
     - _Metallic: 1
     - _QueueControl: 0
@@ -62,4 +62,5 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 0}
     - _Color: {r: 1.5365998, g: 0.85466194, b: 0, a: 0}
+    - _ShineColor: {r: 1, g: 0.8013699, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour
     
     [SerializeField] Transform socketObj;
     [SerializeField] Material holoMat;
-
+    AudioSource source;
     //[SerializeField] MeshFilter inventoryObjectModel;
 
     public IPickeable PickableObject 
@@ -38,6 +38,7 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         //EnableModel(false);
+        source = GetComponent<AudioSource>();
     }
 
     //Primera verision quew actuializa solo la mesh
@@ -77,6 +78,12 @@ public class Inventory : MonoBehaviour
         {
             bf.enabled = false;
         }
+    }
+
+    public void PlayObjectSound(AudioClip c)
+    {
+        source.clip = c;
+        source.Play();
     }
 
     //public void EnableModel(bool enable)

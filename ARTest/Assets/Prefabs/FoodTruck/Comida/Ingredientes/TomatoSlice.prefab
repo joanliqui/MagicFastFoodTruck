@@ -104,6 +104,7 @@ MonoBehaviour:
   foodName: TomatoSlice
   foodSprite: {fileID: 21300000, guid: 6a65e98cc7e0ed44c8ac861e942fcfc6, type: 3}
   modelObject: {fileID: 6064716143057751597}
+  clip: {fileID: 8300000, guid: 5aef40a3e2e0b3e469c0c67573ba1562, type: 3}
 --- !u!65 &7796569761106795931
 BoxCollider:
   m_ObjectHideFlags: 0

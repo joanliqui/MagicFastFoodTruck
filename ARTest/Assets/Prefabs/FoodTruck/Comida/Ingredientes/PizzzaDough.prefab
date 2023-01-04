@@ -51,6 +51,7 @@ MonoBehaviour:
   foodName: PizzaDough
   foodSprite: {fileID: 21300000, guid: 8c2432922eb41554ea446d00f6bd67b0, type: 3}
   modelObject: {fileID: 7873563194406978378}
+  clip: {fileID: 8300000, guid: 5aef40a3e2e0b3e469c0c67573ba1562, type: 3}
 --- !u!114 &5197958693481167067
 MonoBehaviour:
   m_ObjectHideFlags: 0

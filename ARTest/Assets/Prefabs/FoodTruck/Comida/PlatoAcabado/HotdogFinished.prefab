@@ -164,6 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd18ff676b385944a97e90cc853deaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 0}
   foodName: FinishedHotDog
+  foodSprite: {fileID: 0}
   modelObject: {fileID: 7223529478472731262}
-  interactable: {fileID: 0}
+  clip: {fileID: 8300000, guid: 5aef40a3e2e0b3e469c0c67573ba1562, type: 3}

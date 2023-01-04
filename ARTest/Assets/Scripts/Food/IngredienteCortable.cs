@@ -13,6 +13,7 @@ public class IngredienteCortable : BaseFood, ICutable, IPickeable
 
     public delegate void OnCuted(BaseFood cortable);
     public event OnCuted onFoodCut;
+    [SerializeField] AudioClip clip;
     private new void Start()
     {
         base.Start();
@@ -57,7 +58,17 @@ public class IngredienteCortable : BaseFood, ICutable, IPickeable
 
     public void Pick()
     {
-        inventory.AddToInventory(this, modelObject.transform.localScale, transform.localRotation, mat);
+        if (inventory.CntTool == null)
+        {
+            if (clip)
+            {
+                inventory.PlayObjectSound(clip);
+            }
+
+            inventory.AddToInventory(this, modelObject.transform.localScale, Quaternion.identity, mat);
+            OnTakenFood?.Invoke();
+        }
+
     }
 
     private bool CanBeCuted()

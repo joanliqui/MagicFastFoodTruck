@@ -51,6 +51,7 @@ MonoBehaviour:
   foodName: GreenPepperSlice
   foodSprite: {fileID: 21300000, guid: 60498539e4640c846bf05cd53d211972, type: 3}
   modelObject: {fileID: 1817347462248529567}
+  clip: {fileID: 8300000, guid: 5aef40a3e2e0b3e469c0c67573ba1562, type: 3}
 --- !u!114 &1183214569491436600
 MonoBehaviour:
   m_ObjectHideFlags: 0

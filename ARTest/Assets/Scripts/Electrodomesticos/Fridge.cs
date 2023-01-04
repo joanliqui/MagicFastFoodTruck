@@ -8,12 +8,14 @@ public class Fridge : Electrodomestico, IInteractuable
     bool isOpen = false;
     Collider col;
     [SerializeField] GameObject[] doors;
-    [SerializeField] List<BaseFood> foodInside; 
+    [SerializeField] List<BaseFood> foodInside;
+    AudioSource source;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         col = GetComponent<Collider>();
+        source = GetComponent<AudioSource>();
         foreach (var item in doors)
         {
             item.SetActive(true);
@@ -42,6 +44,10 @@ public class Fridge : Electrodomestico, IInteractuable
         EnableCollider(true);
     }
 
+    public void PlaySound()
+    {
+        if (source) source.Play();
+    }
     public void EnableCollider(bool enable)
     {
         col.enabled = enable;

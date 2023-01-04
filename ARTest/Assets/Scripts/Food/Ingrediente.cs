@@ -6,7 +6,7 @@ public class Ingrediente : BaseFood, IPickeable
 {
     [SerializeField] GameObject modelObject;
     private GazeInteractable interactable;
-
+    [SerializeField] AudioClip clip;
     private new void Start()
     {
         base.Start();
@@ -33,6 +33,10 @@ public class Ingrediente : BaseFood, IPickeable
     {
         if(inventory.CntTool == null)
         {
+            if (clip)
+            {
+                inventory.PlayObjectSound(clip);
+            }
             inventory.AddToInventory(this, Vector3.one, transform.localRotation, mat);
             OnTakenFood?.Invoke();
         }
